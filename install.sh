@@ -2,8 +2,13 @@
 # save current dir
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# set ntp server
+echo 'NTP=0.at.pool.ntp.org 1.at.pool.ntp.org 2.at.pool.ntp.org 3.at.pool.ntp.org' >> /etc/systemd/timesyncd.conf
+timedatectl set-ntp true
+
 # create meredrica user
 useradd -m -G wheel -s /usr/bin/zsh meredrica
+echo 'get PASSWORD for meredrica?'
 passwd meredrica
 
 # install base-devel and git
@@ -41,11 +46,14 @@ yaourt --noconfirm -S \
 	xorg-server \
 	zsh \
 
+# enable a few things we need
+systemctl enable lightdm
+
 # some links that make me more sane
 ln -s $(which google-chrome-stable) /usr/bin/chrome
 
 # change to user
-su meredrica
+su meredrica <<'EOF'
 cd ~
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -58,8 +66,7 @@ git config --global push.default simple
 
 # download ssh ids
 scp -r meredrica.org:~/.ssh ~/.ssh
-
-exit
+EOF
 
 # copy all the configs etc
 cd $DIR
