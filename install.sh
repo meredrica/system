@@ -51,6 +51,10 @@ systemctl enable lightdm
 
 # some links that make me more sane
 ln -s $(which google-chrome-stable) /usr/bin/chrome
+ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono-fontconfig.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-kufi-fontconfig.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-sans-fontconfig.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-serif-fontconfig.conf /etc/fonts/conf.d/
 
 # change to user
 su meredrica <<'EOF'
@@ -64,7 +68,7 @@ git config --global user.name "meredrica"
 git config --global rerere.enabled true
 git config --global push.default simple
 
-# download ssh ids
+# download ssh ids, will require password, which is intended
 scp -r meredrica.org:~/.ssh ~/.ssh
 EOF
 
