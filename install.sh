@@ -6,11 +6,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo 'NTP=0.at.pool.ntp.org 1.at.pool.ntp.org 2.at.pool.ntp.org 3.at.pool.ntp.org' >> /etc/systemd/timesyncd.conf
 timedatectl set-ntp true
 
-# create meredrica user
-useradd -m -G wheel -s /usr/bin/zsh meredrica
-echo 'get PASSWORD for meredrica?'
-passwd meredrica
-
 # install base-devel and git
 pacman -S needed base-devel git --noconfirm
 
@@ -51,10 +46,17 @@ systemctl enable lightdm
 
 # some links that make me more sane
 ln -s $(which google-chrome-stable) /usr/bin/chrome
+
+# set default font to ttf-droid
 ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono-fontconfig.conf /etc/fonts/conf.d/
 ln -s /etc/fonts/conf.avail/65-ttf-droid-kufi-fontconfig.conf /etc/fonts/conf.d/
 ln -s /etc/fonts/conf.avail/65-ttf-droid-sans-fontconfig.conf /etc/fonts/conf.d/
 ln -s /etc/fonts/conf.avail/65-ttf-droid-serif-fontconfig.conf /etc/fonts/conf.d/
+
+# create meredrica user
+useradd -m -G wheel -s /usr/bin/zsh meredrica
+echo 'get PASSWORD for meredrica'
+passwd meredrica
 
 # change to user
 su meredrica <<'EOF'
