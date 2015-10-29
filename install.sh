@@ -1,4 +1,11 @@
 #!/bin/bash
+# TODOS:
+# mount cifs etc
+# read passwords from commandline once
+# auto setup cups
+# configure dhcp to static
+# configure keyboard layout
+
 # save current dir
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -24,11 +31,16 @@ makepkg -sri --noconfirm
 yaourt --noconfirm -S \
 	arandr \
 	awesome \
+	cifs-utils \
+	cups \
+	epson-inkjet-printer-workforce-635-nx625-series \
 	google-chrome \
+	imagemagick \
 	jdk8-openjdk \
 	lightdm \
 	lightdm-gtk-greeter \
 	lilyterm \
+	mesa \
 	openssh \
 	pavucontrol \
 	pulseaudio \
@@ -38,6 +50,7 @@ yaourt --noconfirm -S \
 	thunderbird \
 	ttf-droid \
 	vim \
+	xf86-video-ati \
 	xorg-server \
 	zsh \
 
