@@ -49,6 +49,7 @@ yaourt --noconfirm -S \
 	sxiv \
 	thunderbird \
 	ttf-droid \
+	unzip \
 	vim \
 	xf86-video-ati \
 	xorg-server \
