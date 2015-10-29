@@ -7,3 +7,4 @@ cp -v /home/meredrica/.oh-my-zsh/themes/meredrica.zsh-theme ./h/.oh-my-zsh/theme
 
 git add .
 git commit
+git push
