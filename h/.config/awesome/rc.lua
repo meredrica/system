@@ -351,6 +351,7 @@ awful.rules.rules = {
 -- Signal function to execute when a new client appears.
 client.connect_signal("manage", function (c, startup)
     -- Enable sloppy focus
+		c.sticky = false
     c:connect_signal("mouse::enter", function(c)
         if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
             and awful.client.focus.filter(c) then
@@ -359,6 +360,8 @@ client.connect_signal("manage", function (c, startup)
     end)
 
     if not startup then
+				-- move new clients to screen that has the mouse
+				awful.client.movetoscreen(c, mouse.screen)
         -- Set the windows at the slave,
         -- i.e. put it at the end of others instead of setting it master.
         -- awful.client.setslave(c)

@@ -31,6 +31,8 @@ function path_info() {
 	echo "${PWD/#$HOME/~}"
 }
 
+
+
 # set up the various git stuffs
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[yellow]%}<"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[yellow]%}>%{$reset_color%}"

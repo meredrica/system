@@ -33,14 +33,12 @@ yaourt --noconfirm -S \
 	awesome \
 	cifs-utils \
 	cups \
-	epson-inkjet-printer-workforce-635-nx625-series \
 	google-chrome \
 	imagemagick \
 	jdk8-openjdk \
 	lightdm \
 	lightdm-gtk-greeter \
 	lilyterm \
-	mesa \
 	openssh \
 	pavucontrol \
 	pulseaudio \
