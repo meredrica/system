@@ -35,6 +35,7 @@ set smartcase " if typing upcase letters in search, only search for exact matche
 set rtp+=~/.vim/bundle/vundle/ " Vundle runtime path fixes and hook
 set wildmenu " a lot better command-line completion
 set wildmode=list:longest " even better command-line completion
+set paste " sane copy paste
 
 let mapleader="," " set the leader to comma
 
