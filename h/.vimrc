@@ -1,22 +1,22 @@
 set nocompatible " running vim not vi
 " TODO: have a look at these crazy things:
-"   
+"
 " Source the vimrc file after saving it. This way, you don't have to
-"reload Vim to see the changes.  
-"if has("autocmd")  
-" augroup myvimrchooks  
-"   au!  
-"     autocmd bufwritepost .vimrc source ~/.vimrc  
-"      augroup END  
+"reload Vim to see the changes.
+"if has("autocmd")
+" augroup myvimrchooks
+"   au!
+"     autocmd bufwritepost .vimrc source ~/.vimrc
+"      augroup END
 "   endif
 " ---------
-" Set up an HTML5 template for all new .html files  
-""autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl  
-  
+" Set up an HTML5 template for all new .html files
+""autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
+
 
 " set flags sorted with: !sort (visually selected)
 set background=dark " dark background, helps a lot
-set backspace=2 " better backspace 
+set backspace=2 " better backspace
 set cursorline " visual help
 set encoding=utf-8 " fixed encoding
 set fileencoding=utf-8 " fixed encoding
@@ -36,16 +36,17 @@ set rtp+=~/.vim/bundle/vundle/ " Vundle runtime path fixes and hook
 set wildmenu " a lot better command-line completion
 set wildmode=list:longest " even better command-line completion
 
+let mapleader="," " set the leader to comma
 
 " ===============
 " keymappings
 " ===============
 
+nnoremap <leader>u :GundoToggle<CR>
 " ,V and ,v for opening and reloading the vimrc
-" thanks go to thand for providing it
-map ,V :vsplit ~/.vimrc<CR><C-W>_
-map <silent> ,v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-" jj instead of escape key
+map <leader>V :vsplit ~/.vimrc<CR><C-W>_
+map <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+" map jj to escape key in insert mode
 imap jj <esc>
 
 " ===============
