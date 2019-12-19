@@ -48,6 +48,11 @@ map <leader>V :vsplit ~/.vimrc<CR><C-W>_
 map <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 " map jj to escape key in insert mode
 imap jj <esc>
+" move vertically by displayed line instead of real line
+nnoremap j gj
+nnoremap k gk
+" toggle relative line number
+nnoremap <leader>r :set invrelativenumber<CR>
 
 " ===============
 " vundle
