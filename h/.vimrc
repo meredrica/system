@@ -87,13 +87,16 @@ call vundle#rc()
 " vundle itself
 Bundle 'gmarik/vundle'
 " tab completion
-Bundle 'SuperTab-continued'
+Bundle 'ervandew/supertab'
 " file explorer
 Bundle 'scrooloose/nerdtree'
 " xml editing made easyer
 Bundle 'sukima/xmledit'
 " json helper
 Bundle 'jakar/vim-json'
+" undo helper
+Bundle 'sjl/gundo.vim'
+
 " last part of auto install
 if iCanHazVundle == 0
 		echo "Installing Bundles, please ignore key map error messages"
@@ -102,22 +105,6 @@ if iCanHazVundle == 0
 endif
 
 " non auto installed vundles go here. stuff that's language centered etc
-" LaTeX
-" my own LaTeX hax
-Bundle 'meredrica/vim-latex-german'
-" latex helper
-Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
-
-" HTML et all
-" coffeescript
-Bundle 'kchmck/vim-coffee-script'
-
-" ruby etc
-" ruby support
-Bundle 'vim-ruby/vim-ruby'
-" automatically insert end, endif etc for ruby
-Bundle 'tpope/vim-endwise'
-
 syntax on " enable syntax coloring
 filetype on " enable filetype detection
 filetype indent on " indent based on filetype
@@ -136,12 +123,3 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " show hidden files
 let NERDTreeShowHidden=1
-
-" ===============
-" ruby flags
-" ===============
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_rails = 1
-let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_rails = 1
-compiler ruby " enable compiler support for ruby
