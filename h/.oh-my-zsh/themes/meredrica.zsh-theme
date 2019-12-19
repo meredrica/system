@@ -23,15 +23,10 @@ function prompt_char() {
 		echo "%{$fg_bold[$user_color]%}>%{$reset_color%}"
 }
 
-function scm_info() {
-	echo "$(git_prompt_info)"
-}
 # the path, with home as ~
 function path_info() {
 	echo "${PWD/#$HOME/~}"
 }
-
-
 
 # set up the various git stuffs
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[yellow]%}<"
@@ -40,6 +35,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} ! "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[blue]%} ? "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 #user@host path git_promt_info promt_char
-PROMPT='${user}@${host} $(path_info)$(scm_info) ${return_code} $(prompt_char) '
+PROMPT='${user}@${host} $(path_info)$(git_prompt_info) ${return_code} $(prompt_char) '
 # current time in 24hh:mm:ss
 RPROMPT="%*"
