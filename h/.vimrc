@@ -55,6 +55,13 @@ nnoremap k gk
 nnoremap <leader>r :set invrelativenumber<CR>
 
 " ===============
+" automagic stuff
+" ===============
+
+" automatically remove whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+" ===============
 " vundle
 " ===============
 " I prefer github over vimscripts
