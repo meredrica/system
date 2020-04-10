@@ -80,9 +80,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export DOCKER_BUILDKIT=1
+export PIPENV_VENV_IN_PROJECT=1
 source /etc/profile.d/autojump.zsh
 eval $(thefuck --alias)
 alias fh='function _fh(){ fh="$@"; history | fzf -m -q "$fh" };_fh'
+alias c='curl -vvv -H "Content-Type: application/json" $@'
+alias brave-insecure='brave --disable-web-security --user-data-dir=/home/meredrica/insecure'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"
