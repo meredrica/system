@@ -1,4 +1,3 @@
-set nocompatible " running vim not vi
 " TODO: have a look at these crazy things:
 "
 " Source the vimrc file after saving it. This way, you don't have to
@@ -25,7 +24,6 @@ set ignorecase " ignore case on search
 set incsearch " search as you type
 set laststatus=2 " better status line
 set number " line numbers
-set paste
 set shiftwidth=2 " sane indent width
 set showcmd " show command in lower right corner
 set smartcase " if typing upcase letters in search, only search for exact matches
