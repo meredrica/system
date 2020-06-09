@@ -13,6 +13,14 @@
 ""autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
 
 
+" ===============
+" credits
+" ===============
+" Ben Jackson and Boris Staletic helped me out big time here.
+" Without them I would have never figured out that some of the flags I set are
+" causing a lot more trouble than one would expect.
+" Like setting nocompatible or paste
+
 " some flags. keep em !sort-ed (V21j:!sort)
 set background=dark " dark background, helps a lot
 set backspace=2 " better backspace
