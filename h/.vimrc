@@ -16,7 +16,7 @@
 " ===============
 " credits
 " ===============
-" Ben Jackson and Boris Staletic helped me out big time here.
+" Ben Jackson (@puremourning) and Boris Staletic (@bstaletic) helped me out big time here.
 " Without them I would have never figured out that some of the flags I set are
 " causing a lot more trouble than one would expect.
 " Like setting nocompatible or paste
