@@ -25,7 +25,7 @@ set ignorecase " ignore case on search
 set incsearch " search as you type
 set laststatus=2 " better status line
 set number " line numbers
-set paste " sane copy paste
+set paste
 set shiftwidth=2 " sane indent width
 set showcmd " show command in lower right corner
 set smartcase " if typing upcase letters in search, only search for exact matches
@@ -43,7 +43,6 @@ let mapleader="," " set the leader to comma
 " keymappings
 " ===============
 
-nnoremap <leader>u :GundoToggle<CR>
 " ,V and ,v for opening and reloading the vimrc
 map <leader>V :vsplit ~/.vimrc<CR><C-W>_
 map <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
@@ -82,7 +81,6 @@ Plug 'scrooloose/nerdtree'
 " json helper
 Plug 'jakar/vim-json'
 " undo helper
-Plug 'sjl/gundo.vim'
 
 " completion framework -> requires running python
 " TODO: automatically run the python script
@@ -95,7 +93,6 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'honza/vim-snippets'
 
 call plug#end()
-" non auto installed plugins go here. stuff that's language centered etc
 
 syntax on " enable syntax coloring
 filetype on " enable filetype detection
