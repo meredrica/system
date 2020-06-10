@@ -98,19 +98,36 @@ Plug 'ycm-core/YouCompleteMe'
 " actual snippets
 Plug 'honza/vim-snippets'
 
+" plugin library from google
+" needed for google/vim-codefmt
+Plug 'google/vim-maktaba'
+
+" code formatting by google
+Plug 'google/vim-codefmt'
+
+" needed for google/vim-codefmt
+Plug 'google/vim-glaive'
+
 call plug#end()
+call glaive#Install()
+
+" jar file is here https://github.com/google/google-java-format
+Glaive codefmt google_java_executable="java -jar /opt/google-java-format-1.8-all-deps.jar"
 
 syntax on " enable syntax coloring
 filetype on " enable filetype detection
 filetype indent on " indent based on filetype
 "filetype plugin on " find filtypes by plugin
 
+" automatically run format on save
+autocmd FileType java AutoFormatBuffer google-java-format
 " ===============
 " UI
 " ===============
 
 " improve autocomplete menu color
 highlight Pmenu ctermbg=grey
+
 
 " ===============
 " NERDtree
