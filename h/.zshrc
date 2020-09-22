@@ -45,7 +45,7 @@ ZSH_THEME="meredrica"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(colorize battery taskwarrior)
 
 # User configuration
 
@@ -87,6 +87,7 @@ alias fh='function _fh(){ fh="$@"; history | fzf -m -q "$fh" };_fh'
 alias c='curl -vvv -H "Content-Type: application/json" $@'
 alias brave-insecure='brave --disable-web-security --user-data-dir=/home/meredrica/insecure'
 alias stfu="$@ > /dev/null 2>&1"
+alias mci="mvn clean install -T4C $@"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"

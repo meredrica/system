@@ -29,10 +29,13 @@ makepkg -sri --noconfirm
 
 # install a lot of packages
 yaourt --noconfirm -S \
+	acpi \
 	arandr \
+	autojump \
 	awesome \
 	cifs-utils \
 	cups \
+	go-chroma \
 	google-chrome \
 	imagemagick \
 	jdk8-openjdk \
@@ -45,6 +48,7 @@ yaourt --noconfirm -S \
 	qpdfview \
 	sudo \
 	sxiv \
+	thefuck \
 	thunderbird \
 	ttf-droid \
 	unzip \
@@ -55,9 +59,6 @@ yaourt --noconfirm -S \
 
 # enable a few things we need
 systemctl enable lightdm
-
-# some links that make me more sane
-ln -s $(which google-chrome-stable) /usr/bin/chrome
 
 # set default font to ttf-droid
 ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono-fontconfig.conf /etc/fonts/conf.d/
