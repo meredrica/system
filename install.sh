@@ -50,6 +50,7 @@ yaourt --noconfirm -S \
 	sxiv \
 	thefuck \
 	thunderbird \
+	tldr \
 	ttf-droid \
 	unzip \
 	vim \
