@@ -127,8 +127,11 @@ Plug 'jbgutierrez/vim-better-comments'
 " markdown. order matters
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-" i hate more than 2 spaces
+" I hate more than 2 spaces
 let g:vim_markdown_new_list_item_indent = 2
+
+" folding is annoying as hell
+let g:vim_markdown_folding_disabled = 1
 
 " vim show changed lines
 Plug 'airblade/vim-gitgutter'
