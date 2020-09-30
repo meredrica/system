@@ -37,4 +37,4 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 #user@host path git_promt_info promt_char
 PROMPT='${user}@${host} $(path_info)$(git_prompt_info) ${return_code} $(prompt_char) '
 # current time in 24hh:mm:ss, battery status
-RPROMPT="%* $(battery_pct_prompt)"
+RPROMPT='%* $(battery_pct_prompt)'
