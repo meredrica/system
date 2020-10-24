@@ -87,7 +87,8 @@ alias fh='function _fh(){ fh="$@"; history | fzf -m -q "$fh" };_fh'
 alias c='curl -vvv -H "Content-Type: application/json" $@'
 alias brave-insecure='brave --disable-web-security --user-data-dir=/home/meredrica/insecure'
 alias stfu="$@ > /dev/null 2>&1"
-alias mci="mvn clean install -T4C $@"
+alias mci="mvn clean install -T4C -ff $@"
+alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIr "$icanhaz" -C3 .};_icanhaz'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"
