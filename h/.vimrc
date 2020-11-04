@@ -37,13 +37,15 @@ set wrap " wrap terribly long lines
 " keymappings {{{
 " ===============
 
-let mapleader="," " set the leader to comma
+" set the leader to comma
+let mapleader=","
+
 " ,V and ,v for opening and reloading the vimrc
-map <leader>V :vsplit ~/.vimrc<CR><C-W>_
-map <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+nnoremap <leader>V :vsplit ~/.vimrc<CR><C-W>
+nnoremap <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " map jj to escape key in insert mode
-imap jj <esc>
+inoremap jj <esc>
 
 " move vertically by displayed line instead of real line
 nnoremap j gj
@@ -56,15 +58,36 @@ nnoremap <leader>r :set invrelativenumber<CR>
 nmap <leader>d <Plug>(coc-definition)
 nmap <leader>i <Plug>(coc-implementation)
 nmap <leader>r <Plug>(coc-references)
-map <leader>R <Plug>(coc-rename)
-nmap <leader>f :CocFix<CR>
-" because I can
-imap <leader>F (╯°□°)╯︵ ┻━┻
-nmap <leader>F :NERDTreeFind<CR>
+nmap <leader>R <Plug>(coc-rename)
+nmap <leader>f :call coc#util#close_floats()<CR>:CocFix<CR>
 
-" fuzzy file open with ctrlp
-let $FZF_DEFAULT_OPTS= '--query="!bin !target"'
-nmap <leader>o :FZF<CR>
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+" map TAB to go up in pum
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-@> coc#refresh()
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" because I can
+inoremap <leader>F (╯°□°)╯︵ ┻━┻
+
+" find current file in nerdtree
+noremap <leader>F :NERDTreeFind<CR>
+
+" fuzzy file open
+let $FZF_DEFAULT_OPTS= '--query="!bin !target "'
+nnoremap <leader>o :FZF<CR>
+
+
+"}}}
 
 " plugins {{{
 " ===============
@@ -84,9 +107,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'sukima/xmledit'
 " json helper
 Plug 'jakar/vim-json'
-
-" completion framework -> requires running python
-"Plug 'ycm-core/YouCompleteMe', {'do': './install.sh --java'}
 
 " conquer of completion
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml'}
@@ -128,6 +148,7 @@ filetype plugin on " find filtypes by plugin
 " improve autocomplete menu color
 " find settings with :highlight
 highlight Pmenu ctermbg=grey
+highlight PmenuSel ctermfg=yellow"
 "}}}
 
 " NERDtree {{{
@@ -140,31 +161,29 @@ let NERDTreeShowHidden=1
 " automagic stuff {{{
 " ===============
 
-" automatically remove whitespace on save
+" autofold this file with markers
+autocmd BufEnter .vimrc setlocal foldmethod=marker
+
+" remove whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-" ===============
-" conquer of completion specific
-" ===============
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" open nerdtree by default instead of empty buffer
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p | endif
 
-" Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" close nerd tree if it's the last buffer
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"}}}
+
+" conquer of completion functions {{{
+" ===============
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-@> coc#refresh()
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
