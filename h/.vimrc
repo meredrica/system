@@ -1,26 +1,12 @@
-" TODO: have a look at these crazy things:
-"
-" Source the vimrc file after saving it. This way, you don't have to
-"reload Vim to see the changes.
-"if has("autocmd")
-" augroup myvimrchooks
-"   au!
-"     autocmd bufwritepost .vimrc source ~/.vimrc
-"      augroup END
-"   endif
-" ---------
-" Set up an HTML5 template for all new .html files
-""autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
-
-
-" ===============
-" credits
+" credits {{{
 " ===============
 " Ben Jackson (@puremourning) and Boris Staletic (@bstaletic) helped me out big time here.
 " Without them I would have never figured out that some of the flags I set are
 " causing a lot more trouble than one would expect.
 " Like setting nocompatible or paste
+"}}}
 
+" settings and flags {{{
 " some flags. keep em !sort-ed (V22j:!sort)
 set background=dark " dark background, helps a lot
 set backspace=2 " better backspace
@@ -46,10 +32,9 @@ set wildignore+=/**/*.class
 set wildmenu " a lot better command-line completion
 set wildmode=list:longest " even better command-line completion
 set wrap " wrap terribly long lines
+"}}}
 
-
-" ===============
-" keymappings
+" keymappings {{{
 " ===============
 
 let mapleader="," " set the leader to comma
@@ -81,11 +66,10 @@ nmap <leader>F :NERDTreeFind<CR>
 let $FZF_DEFAULT_OPTS= '--query="!bin !target"'
 nmap <leader>o :FZF<CR>
 
-" ===============
-" plugins
+" plugins {{{
 " ===============
 
-" automagically install plugin management  and all plugins if they are not present
+" automagically install plugin management and all plugins if they are not present
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -136,26 +120,24 @@ syntax on " enable syntax coloring
 filetype on " enable filetype detection
 filetype indent on " indent based on filetype
 filetype plugin on " find filtypes by plugin
+"}}}
 
-
-" ===============
-" UI
+" UI {{{
 " ===============
 
 " improve autocomplete menu color
 " find settings with :highlight
 highlight Pmenu ctermbg=grey
+"}}}
 
-" ===============
-" NERDtree
+" NERDtree {{{
 " ===============
 
 " show hidden files
 let NERDTreeShowHidden=1
+"}}}
 
-
-" ===============
-" automagic stuff
+" automagic stuff {{{
 " ===============
 
 " automatically remove whitespace on save
@@ -191,3 +173,4 @@ function! s:show_documentation()
     call CocActionAsync('doHover')
   endif
 endfunction
+"}}}
