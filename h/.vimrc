@@ -52,7 +52,7 @@ nnoremap j gj
 nnoremap k gk
 
 " toggle relative line number
-nnoremap <leader>r :set invrelativenumber<CR>
+nnoremap <leader>rn :set invrelativenumber<CR>
 
 " go to definition etc.
 nmap <leader>d <Plug>(coc-definition)
@@ -61,13 +61,18 @@ nmap <leader>r <Plug>(coc-references)
 nmap <leader>R <Plug>(coc-rename)
 nmap <leader>f :call coc#util#close_floats()<CR>:CocFix<CR>
 
+" completion
+imap <leader>c <Plug>(coc-snippets-expand-jump)
+
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
 
-" map TAB to go up in pum
+" map Shift TAB to go up in pum
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use <c-space> to trigger completion.
@@ -96,7 +101,7 @@ nnoremap <leader>o :FZF<CR>
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -109,7 +114,7 @@ Plug 'sukima/xmledit'
 Plug 'jakar/vim-json'
 
 " conquer of completion
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets'}
 
 " plugin library from google
 " needed for google/vim-codefmt
