@@ -48,33 +48,9 @@ cd /tmp/yay
 makepkg -sri --noconfirm
 
 # install a lot of packages
-yay --noconfirm --needed -S \
-	acpi \
-	arandr \
-	autojump \
-	awesome \
-	cifs-utils \
-	cups \
-	go-chroma \
-	brave \
-	imagemagick \
-	jdk8-openjdk \
-	lightdm \
-	lightdm-gtk-greeter \
-	lilyterm \
-	openssh \
-	pavucontrol \
-	pulseaudio \
-	qpdfview \
-	sxiv \
-	thefuck \
-	thunderbird \
-	tldr \
-	ttf-droid \
-	unzip \
-	vim \
-	xf86-video-ati \
-	xorg-server \
+cd $DIR
+sh packages.sh
+
 EOF
 
 # enable a few things we need

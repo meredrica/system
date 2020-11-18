@@ -1,0 +1,31 @@
+#!/bin/sh
+yay --noconfirm --needed -S \
+	acpi \
+	arandr \
+	autojump \
+	awesome \
+	cifs-utils \
+	cups \
+	go-chroma \
+	htop \
+	brave \
+	imagemagick \
+	jdk8-openjdk \
+	lightdm \
+	lightdm-gtk-greeter \
+	lilyterm \
+	npm \
+	nodejs \
+	openssh \
+	pavucontrol \
+	pulseaudio \
+	qpdfview \
+	sxiv \
+	thefuck \
+	thunderbird \
+	tldr \
+	ttf-droid \
+	unzip \
+	vim \
+	xf86-video-ati \
+	xorg-server \
