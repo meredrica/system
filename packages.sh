@@ -4,30 +4,61 @@ yay --noconfirm --needed -S \
 	arandr \
 	autojump \
 	awesome \
-	cifs-utils \
-	cups \
-	go-chroma \
-	htop \
+	banner \
+	biber \
 	bitwarden-bin \
 	bitwarden-cli \
 	brave-bin \
+	cifs-utils \
+	code \
+	cups \
+	cura \
+	discord \
+	docker \
+	dolphin \
+	dolphin-plugins \
+	ffmpeg \
+	ffmpegthumbs \
+	frei0r-plugins \
+	fzf \
+	gimp \
+	go-chroma \
+	graphviz \
+	gron-bin \
+	htop \
+	hugo \
 	imagemagick \
-	jdk8-openjdk \
+	inkscape \
+	jdk11-openjdk \
+	jdk-openjdk \
+	jq \
+	kdenlive \
+	latex-make \
+	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
-	lilyterm \
-	npm \
+	lilyterm-git \
+	maven \
 	nodejs \
+	nodejs \
+	npm \
+	openscad \
 	openssh \
 	pavucontrol \
 	pulseaudio \
+	pulseaudio-alsa \
 	qpdfview \
 	sxiv \
+	task \
 	thefuck \
 	thunderbird \
+	timew \
+	tldr \
 	tldr \
 	ttf-droid \
 	unzip \
 	vim \
 	xf86-video-ati \
 	xorg-server \
+	xscreensaver \
+	zathura \
