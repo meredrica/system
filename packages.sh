@@ -8,7 +8,9 @@ yay --noconfirm --needed -S \
 	cups \
 	go-chroma \
 	htop \
-	brave \
+	bitwarden-bin \
+	bitwarden-cli \
+	brave-bin \
 	imagemagick \
 	jdk8-openjdk \
 	lightdm \
