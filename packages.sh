@@ -58,6 +58,7 @@ yay --noconfirm --needed -S \
 	ttf-droid \
 	unzip \
 	vim \
+	vlc \
 	xf86-video-ati \
 	xorg-server \
 	xscreensaver \
