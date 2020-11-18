@@ -14,63 +14,16 @@ echo 'NTP=0.at.pool.ntp.org 1.at.pool.ntp.org 2.at.pool.ntp.org 3.at.pool.ntp.or
 timedatectl set-ntp true
 
 # install base-devel and git
-pacman -S needed base-devel git --noconfirm
-
-# install yaourt
-cd /tmp
-git clone https://aur.archlinux.org/package-query.git
-git clone https://aur.archlinux.org/yaourt.git
-
-cd /tmp/package-query
-makepkg -sri --noconfirm
-
-cd /tmp/yaourt
-makepkg -sri --noconfirm
-
-# install a lot of packages
-yaourt --noconfirm -S \
-	acpi \
-	arandr \
-	autojump \
-	awesome \
-	cifs-utils \
-	cups \
-	go-chroma \
-	google-chrome \
-	imagemagick \
-	jdk8-openjdk \
-	lightdm \
-	lightdm-gtk-greeter \
-	lilyterm \
-	openssh \
-	pavucontrol \
-	pulseaudio \
-	qpdfview \
-	sudo \
-	sxiv \
-	thefuck \
-	thunderbird \
-	tldr \
-	ttf-droid \
-	unzip \
-	vim \
-	xf86-video-ati \
-	xorg-server \
-	zsh \
-
-# enable a few things we need
-systemctl enable lightdm
-
-# set default font to ttf-droid
-ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono-fontconfig.conf /etc/fonts/conf.d/
-ln -s /etc/fonts/conf.avail/65-ttf-droid-kufi-fontconfig.conf /etc/fonts/conf.d/
-ln -s /etc/fonts/conf.avail/65-ttf-droid-sans-fontconfig.conf /etc/fonts/conf.d/
-ln -s /etc/fonts/conf.avail/65-ttf-droid-serif-fontconfig.conf /etc/fonts/conf.d/
+pacman -Suy
+pacman -S --needed base-devel git zsh sudo openssh yajl wget --noconfirm
 
 # create meredrica user
 useradd -m -G wheel -s /usr/bin/zsh meredrica
 echo 'get PASSWORD for meredrica'
 passwd meredrica
+
+# enable the wheel group
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 # change to user
 su meredrica <<'EOF'
@@ -86,12 +39,58 @@ git config --global push.default simple
 
 # download ssh ids, will require password, which is intended
 scp -r meredrica.org:~/.ssh ~/.ssh
+
+# install yay
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+
+cd /tmp/yay
+makepkg -sri --noconfirm
+
+# install a lot of packages
+yay --noconfirm --needed -S \
+	acpi \
+	arandr \
+	autojump \
+	awesome \
+	cifs-utils \
+	cups \
+	go-chroma \
+	brave \
+	imagemagick \
+	jdk8-openjdk \
+	lightdm \
+	lightdm-gtk-greeter \
+	lilyterm \
+	openssh \
+	pavucontrol \
+	pulseaudio \
+	qpdfview \
+	sxiv \
+	thefuck \
+	thunderbird \
+	tldr \
+	ttf-droid \
+	unzip \
+	vim \
+	xf86-video-ati \
+	xorg-server \
 EOF
+
+# enable a few things we need
+systemctl enable lightdm
+
+# set default font to ttf-droid
+ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono-fontconfig.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-kufi-fontconfig.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-sans-fontconfig.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-serif-fontconfig.conf /etc/fonts/conf.d/
+
 
 # copy all the configs etc
 cd $DIR
 cp -rT ./h/ /home/meredrica
 chown meredrica:meredrica /home/meredrica -R
 
-# clean up stuff
-yaourt -Qdtq | yaourt -Rs --noconfirm -
+# cleanup
+yay -c
