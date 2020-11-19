@@ -57,10 +57,10 @@ EOF
 systemctl enable lightdm
 
 # set default font to ttf-droid
-ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono-fontconfig.conf /etc/fonts/conf.d/
-ln -s /etc/fonts/conf.avail/65-ttf-droid-kufi-fontconfig.conf /etc/fonts/conf.d/
-ln -s /etc/fonts/conf.avail/65-ttf-droid-sans-fontconfig.conf /etc/fonts/conf.d/
-ln -s /etc/fonts/conf.avail/65-ttf-droid-serif-fontconfig.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-kufi.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-sans.conf /etc/fonts/conf.d/
+ln -s /etc/fonts/conf.avail/65-ttf-droid-serif.conf /etc/fonts/conf.d/
 
 
 # copy all the configs etc
