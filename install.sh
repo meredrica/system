@@ -37,9 +37,6 @@ git config --global user.name "meredrica"
 git config --global rerere.enabled true
 git config --global push.default simple
 
-# download ssh ids, will require password, which is intended
-scp -r meredrica.org:~/.ssh ~/.ssh
-
 # install yay
 cd /tmp
 git clone https://aur.archlinux.org/yay.git
