@@ -63,3 +63,4 @@ yay --noconfirm --needed -S \
 	xorg-server \
 	xscreensaver \
 	zathura \
+	zip \
