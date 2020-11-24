@@ -4,6 +4,7 @@ cp -v /home/meredrica/.vimrc ./h/
 cp -v /home/meredrica/.config/awesome/rc.lua ./h/.config/awesome/rc.lua
 cp -v /home/meredrica/.config/lilyterm/default.conf ./h/.config/lilyterm/default.conf
 cp -v /home/meredrica/.oh-my-zsh/themes/meredrica.zsh-theme ./h/.oh-my-zsh/themes/meredrica.zsh-theme
-cp -v /home/meredrica/.xinitrc ./h/
+cp -v /home/meredrica/.xprofile ./h/
+cp -v /home/meredrica/.gitconfig ./h/
 
 git add -p && git commit && git push
