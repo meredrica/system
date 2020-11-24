@@ -108,8 +108,6 @@ call plug#begin('~/.vim/plugged')
 
 " file explorer
 Plug 'scrooloose/nerdtree'
-" xml editing made easyer
-Plug 'sukima/xmledit'
 " json helper
 Plug 'jakar/vim-json'
 
@@ -152,8 +150,8 @@ filetype plugin on " find filtypes by plugin
 
 " improve autocomplete menu color
 " find settings with :highlight
-highlight Pmenu ctermbg=grey
-highlight PmenuSel ctermfg=yellow"
+highlight Pmenu ctermbg=darkgrey ctermfg=white
+highlight PmenuSel ctermfg=yellow
 "}}}
 
 " NERDtree {{{
