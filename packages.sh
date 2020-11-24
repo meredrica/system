@@ -55,7 +55,7 @@ yay --noconfirm --needed -S \
 	timew \
 	tldr \
 	tldr \
-	ttf-droid \
+	ttf-dejavu \
 	unzip \
 	vim \
 	vlc \
