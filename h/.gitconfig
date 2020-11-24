@@ -1,0 +1,20 @@
+[user]
+	name = meredrica
+	email = stuff@meredrica.org
+[rerere]
+	enabled = true
+[push]
+	default = simple
+[credential]
+	helper = store
+[core]
+	autocrlf = input
+	editor = vim
+[fetch]
+	prune = true
+[help]
+	autocorrect = 15
+[pull]
+	ff = only
+[includeIf "gitdir:~/work/"]
+	path = ~/work/.gitconfig
