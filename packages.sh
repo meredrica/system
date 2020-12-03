@@ -33,11 +33,11 @@ yay --noconfirm --needed -S \
 	jdk-openjdk \
 	jq \
 	kdenlive \
+	kitty \
 	latex-make \
 	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
-	lilyterm-git \
 	maven \
 	nodejs \
 	nodejs \
