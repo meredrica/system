@@ -7,7 +7,7 @@
 "}}}
 
 " settings and flags {{{
-" some flags. keep em !sort-ed (V22j:!sort)
+" some flags. keep em !sort-ed (V23j:!sort)
 set background=dark " dark background, helps a lot
 set backspace=2 " better backspace
 set conceallevel=2 " Concealing
@@ -15,6 +15,7 @@ set cursorline " visual help
 set encoding=utf-8 " fixed encoding
 set fileencoding=utf-8 " fixed encoding
 set hlsearch " highlight search
+set hidden " recommended by coc
 set ignorecase " ignore case on search
 set incsearch " search as you type
 set laststatus=2 " better status line
