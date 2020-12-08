@@ -50,7 +50,7 @@ yay --noconfirm --needed -S \
 	qpdfview \
 	sxiv \
 	task \
-	texlive-full\
+	texlive-most\
 	thefuck \
 	thunderbird \
 	timew \
