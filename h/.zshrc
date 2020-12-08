@@ -37,7 +37,7 @@ alias stfu="$@ > /dev/null 2>&1"
 # type less maven
 alias mci="mvn clean install -T4C -ff $@"
 # grep is hard
-alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIr --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
+alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"
