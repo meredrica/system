@@ -64,4 +64,5 @@ yay --noconfirm --needed -S \
 	xorg-server \
 	xscreensaver \
 	zathura \
+	zathura-pdf-poppler \
 	zip \
