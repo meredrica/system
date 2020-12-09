@@ -39,6 +39,9 @@ alias mci="mvn clean install -T4C -ff $@"
 # grep is hard
 alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
 
+# kitty is kinda awesome
+alias icat="kitty +kitten icat"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"
 [[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
