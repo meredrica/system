@@ -40,7 +40,6 @@ yay --noconfirm --needed -S \
 	lightdm-gtk-greeter \
 	maven \
 	nodejs \
-	nodejs \
 	npm \
 	openscad \
 	openssh \
@@ -54,7 +53,6 @@ yay --noconfirm --needed -S \
 	thefuck \
 	thunderbird \
 	timew \
-	tldr \
 	tldr \
 	ttf-dejavu \
 	unzip \
