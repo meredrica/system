@@ -7,7 +7,7 @@ yay --noconfirm --needed -S \
 	banner \
 	biber \
 	bitwarden-bin \
-	bitwarden-cli \
+	bitwarden-cli-bin \
 	brave-bin \
 	cifs-utils \
 	code \
