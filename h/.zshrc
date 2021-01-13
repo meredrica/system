@@ -38,9 +38,12 @@ alias stfu="$@ > /dev/null 2>&1"
 alias mci="mvn clean install -T4C -ff $@"
 # grep is hard
 alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
+# git log with relative date and author
+alias gl="git log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
 # kitty is kinda awesome
 alias icat="kitty +kitten icat"
+alias ssh="kitty +kitten ssh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"
