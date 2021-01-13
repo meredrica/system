@@ -2,7 +2,7 @@
 yay --noconfirm --needed -S \
 	acpi \
 	arandr \
-	autojump \
+	autojump-rs \
 	awesome \
 	banner \
 	biber \
