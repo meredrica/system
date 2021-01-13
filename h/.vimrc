@@ -89,7 +89,7 @@ inoremap <leader>F (╯°□°)╯︵ ┻━┻
 noremap <leader>F :NERDTreeFind<CR>
 
 " fuzzy file open
-let $FZF_DEFAULT_OPTS= '--query="!bin !target "'
+let $FZF_DEFAULT_OPTS= '--query="!bin !target !build "'
 nnoremap <leader>o :FZF<CR>
 
 
