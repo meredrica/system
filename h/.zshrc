@@ -10,6 +10,7 @@ plugins=(colorize battery taskwarrior autojump thefuck command-not-found helm)
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 export PATH="$PATH:/usr/lib/node_modules"
+export PATH="$PATH:/usr/lib/jvm/default/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

@@ -1,11 +1,3 @@
-" credits {{{
-" ===============
-" Ben Jackson (@puremourning) and Boris Staletic (@bstaletic) helped me out big time here.
-" Without them I would have never figured out that some of the flags I set are
-" causing a lot more trouble than one would expect.
-" Like setting nocompatible or paste
-"}}}
-
 " settings and flags {{{
 " some flags. keep em !sort-ed (V23j:!sort)
 set background=dark " dark background, helps a lot
@@ -133,6 +125,11 @@ Plug 'airblade/vim-gitgutter'
 
 " well, fugitive. huge git plugin
 Plug 'tpope/vim-fugitive'
+
+" markdown formatting
+" tabular has to come first
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 call glaive#Install()
