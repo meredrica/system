@@ -42,10 +42,7 @@ alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.gi
 # git log with relative date and author
 alias gl="git log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
-# kitty is kinda awesome
-alias icat="kitty +kitten icat"
-alias ssh="kitty +kitten ssh"
-
+alias ssh='TERM=xterm-256color ssh'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"
 [[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"

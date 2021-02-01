@@ -1,6 +1,7 @@
 #!/bin/sh
 yay --noconfirm --needed -S \
 	acpi \
+	alacritty \
 	arandr \
 	autojump-rs \
 	awesome \
@@ -33,7 +34,6 @@ yay --noconfirm --needed -S \
 	jdk-openjdk \
 	jq \
 	kdenlive \
-	kitty \
 	latex-make \
 	libreoffice-fresh \
 	lightdm \
