@@ -41,6 +41,7 @@ alias mci="mvn clean install -T4C -ff $@"
 alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
 # git log with relative date and author
 alias gl="git log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias stern="stern --template '{{color .PodColor .PodName}} {{.Message}}{{\"\n\"}}'"
 
 alias ssh='TERM=xterm-256color ssh'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
