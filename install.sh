@@ -44,6 +44,9 @@ git clone https://aur.archlinux.org/yay.git
 cd /tmp/yay
 makepkg -sri --noconfirm
 
+# set the yay flags
+yay --cleanafter --sudoloop --answerclean y --answerdiff n --answeredit n --save
+
 # install a lot of packages
 cd $DIR
 sh packages.sh
