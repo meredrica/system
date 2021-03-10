@@ -78,9 +78,10 @@ inoremap <leader>F (╯°□°)╯︵ ┻━┻
 noremap <leader>F :NERDTreeFind<CR>
 
 " fuzzy file open
-let $FZF_DEFAULT_OPTS= '--query="!bin !target !build "'
+let $FZF_DEFAULT_OPTS= '--query="!bin/ !target/ !build/ "'
 nnoremap <leader>o :FZF<CR>
 
+autocmd FileType todo let maplocalleader = ","
 
 "}}}
 
@@ -128,6 +129,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" todo.txt
+Plug 'freitass/todo.txt-vim'
+
+" folding
+Plug 'pseewald/anyfold'
+" auto fold java
+autocmd Filetype java AnyFoldActivate
+let g:anyfold_identify_comments=2 " keep comments open
+
+
 call plug#end()
 call glaive#Install()
 
@@ -161,6 +172,9 @@ let NERDTreeShowHidden=1
 
 " autofold this file with markers
 autocmd BufEnter .vimrc setlocal foldmethod=marker
+
+" fold java with level 1
+autocmd FileType java setlocal foldlevel=1
 
 " remove whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
