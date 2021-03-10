@@ -52,7 +52,7 @@ nmap <leader>d <Plug>(coc-definition)
 nmap <leader>i <Plug>(coc-implementation)
 nmap <leader>r <Plug>(coc-references)
 nmap <leader>R <Plug>(coc-rename)
-nmap <leader>f :call coc#util#close_floats()<CR>:CocFix<CR>
+nmap <leader>f :CocFix<CR>
 
 " completion
 imap <leader>c <Plug>(coc-snippets-expand-jump)
@@ -64,9 +64,6 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
-
-" map Shift TAB to go up in pum
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-@> coc#refresh()
@@ -148,7 +145,7 @@ filetype plugin on " find filtypes by plugin
 
 " improve autocomplete menu color
 " find settings with :highlight
-highlight Pmenu ctermbg=darkgrey ctermfg=white
+highlight Pmenu ctermbg=black ctermfg=white
 highlight PmenuSel ctermfg=yellow
 "}}}
 
