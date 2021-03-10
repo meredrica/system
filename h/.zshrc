@@ -41,7 +41,12 @@ alias mci="mvn clean install -T4C -ff $@"
 alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
 # git log with relative date and author
 alias gl="git log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+# better stern output
 alias stern="stern --template '{{color .PodColor .PodName}} {{.Message}}{{\"\n\"}}'"
+# i don't want to type this
+alias todo="todotxt-machine"
+# tag a project with a timestamp and push it
+alias release='function _release(){ tag="$@"-$(date +'%Y-%m-%d_%H-%M'); echo $tag; git tag -a $tag && git push --tags};_release'
 
 alias ssh='TERM=xterm-256color ssh'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
