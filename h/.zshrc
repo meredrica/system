@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="meredrica"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize battery taskwarrior autojump thefuck command-not-found helm)
+plugins=(colorize battery autojump thefuck helm)
 
 # User configuration
 
