@@ -12,7 +12,7 @@ local git_symbol_color="cyan"
 # last return code as green or red smiley
 local return_code="%(?.%{$fg_bold[green]%}:)%{$reset_color%}.%{$fg_bold[red]%}:(%{$reset_color%})"
 # user bold and in user color
-local user="%{$fg_bold[$user_color]%}%n%{$reset_color%}"
+local user="%{$fg_bold[$user_color]%}${USERNAME[1]}%{$reset_color%}"
 
 #host bold and in ssh color
 local host="%{$fg_bold[$ssh_color]%}%m%{$reset_color%}"
@@ -35,6 +35,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} ! "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[blue]%} ? "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 #user@host path git_promt_info promt_char
-PROMPT='${user}@${host} $(path_info)$(git_prompt_info) ${return_code} $(prompt_char) '
+PROMPT='$user@${host} $(path_info)$(git_prompt_info) ${return_code} $(prompt_char) '
 # current time in 24hh:mm:ss, battery status
 RPROMPT='%* $(battery_pct_prompt)'

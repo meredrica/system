@@ -4,7 +4,8 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="meredrica"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize battery autojump thefuck helm)
+#plugins=(battery autojump helm)
+plugins=(battery autojump)
 
 # User configuration
 
@@ -17,14 +18,6 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 export DOCKER_BUILDKIT=1
 export PIPENV_VENV_IN_PROJECT=1
 # developing localhost without security ftw
@@ -49,6 +42,7 @@ alias todo="todotxt-machine"
 alias release='function _release(){ tag="$@"-$(date +'%Y-%m-%d_%H-%M'); echo $tag; git tag -a $tag && git push --tags};_release'
 
 alias ssh='TERM=xterm-256color ssh'
+eval $(thefuck --alias)
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/meredrica/.sdkman"
 [[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
