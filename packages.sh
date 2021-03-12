@@ -64,3 +64,5 @@ yay --noconfirm --needed -S \
 	zathura \
 	zathura-pdf-poppler \
 	zip \
+	zsh-autosuggestions \
+	zsh-syntax-highlighting \

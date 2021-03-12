@@ -1,25 +1,17 @@
-# Path to your oh-my-zsh installation.
+#ZSH setup
 export ZSH=$HOME/.oh-my-zsh
-
 ZSH_THEME="meredrica"
-
-# Add wisely, as too many plugins slow down shell startup.
-#plugins=(battery autojump helm)
-plugins=(battery autojump)
+plugins=(battery autojump thefuck)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
-export PATH="$PATH:/usr/lib/node_modules"
-export PATH="$PATH:/usr/lib/jvm/default/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin"
+export PIPENV_VENV_IN_PROJECT=1
+export EDITOR='vim'
+export SDKMAN_DIR="/home/meredrica/.sdkman"
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR='vim'
-
-export DOCKER_BUILDKIT=1
-export PIPENV_VENV_IN_PROJECT=1
 # developing localhost without security ftw
 alias brave-insecure='brave --disable-web-security --user-data-dir=/home/meredrica/insecure'
 # fuzzy history search
@@ -40,9 +32,9 @@ alias stern="stern --template '{{color .PodColor .PodName}} {{.Message}}{{\"\n\"
 alias todo="todotxt-machine"
 # tag a project with a timestamp and push it
 alias release='function _release(){ tag="$@"-$(date +'%Y-%m-%d_%H-%M'); echo $tag; git tag -a $tag && git push --tags};_release'
-
+# fix ssh problems with alacritty
 alias ssh='TERM=xterm-256color ssh'
-eval $(thefuck --alias)
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/meredrica/.sdkman"
 [[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
+# zsh awesomeness
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
