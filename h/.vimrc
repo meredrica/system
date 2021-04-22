@@ -37,9 +37,6 @@ let mapleader=","
 nnoremap <leader>V :vsplit ~/.vimrc<CR><C-W>
 nnoremap <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-" map jj to escape key in insert mode
-inoremap jj <esc>
-
 " move vertically by displayed line instead of real line
 nnoremap j gj
 nnoremap k gk
@@ -47,12 +44,28 @@ nnoremap k gk
 " toggle relative line number
 nnoremap <leader>rn :set invrelativenumber<CR>
 
+" copy to clipboard
+vnoremap <leader>c "+y<CR>
+
+" find current file in nerdtree
+noremap <leader>F :NERDTreeFind<CR>
+
+" fuzzy file open
+let $FZF_DEFAULT_OPTS= '--query="!bin/ !target/ !build/ "'
+nnoremap <leader>o :FZF<CR>
+
 " go to definition etc.
 nmap <leader>d <Plug>(coc-definition)
 nmap <leader>i <Plug>(coc-implementation)
 nmap <leader>r <Plug>(coc-references)
 nmap <leader>R <Plug>(coc-rename)
 nmap <leader>f :CocFix<CR>
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" map jj to escape key in insert mode
+inoremap jj <esc>
 
 " completion
 imap <leader>c <Plug>(coc-snippets-expand-jump)
@@ -68,18 +81,8 @@ let g:coc_snippet_prev = '<S-TAB>'
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-@> coc#refresh()
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
 " because I can
 inoremap <leader>F (╯°□°)╯︵ ┻━┻
-
-" find current file in nerdtree
-noremap <leader>F :NERDTreeFind<CR>
-
-" fuzzy file open
-let $FZF_DEFAULT_OPTS= '--query="!bin/ !target/ !build/ "'
-nnoremap <leader>o :FZF<CR>
 
 autocmd FileType todo let maplocalleader = ","
 
