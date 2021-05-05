@@ -106,17 +106,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'jakar/vim-json'
 
 " conquer of completion
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets coc-kotlin'}
 
 " plugin library from google
 " needed for google/vim-codefmt
 Plug 'google/vim-maktaba'
-
-" code formatting by google
-Plug 'google/vim-codefmt', {'do': 'curl -L https://github.com/google/google-java-format/releases/download/google-java-format-1.8/google-java-format-1.8-all-deps.jar -o /home/meredrica/.vim/plugged/vim-codefmt/format.jar'}
-"
-" needed for google/vim-codefmt
-Plug 'google/vim-glaive'
 
 " comment highlighting
 Plug 'jbgutierrez/vim-better-comments'
@@ -132,6 +126,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" kotlin
+Plug 'udalov/kotlin-vim'
+
 " todo.txt
 Plug 'freitass/todo.txt-vim'
 
@@ -143,10 +140,6 @@ let g:anyfold_identify_comments=2 " keep comments open
 
 
 call plug#end()
-call glaive#Install()
-
-"Glaive formatter setup for java. jar file is here https://github.com/google/google-java-format
-Glaive codefmt google_java_executable="java -jar /home/meredrica/.vim/plugged/vim-codefmt/format.jar"
 
 syntax on " enable syntax coloring
 filetype on " enable filetype detection

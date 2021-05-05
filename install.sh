@@ -35,9 +35,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 git config --global user.email "stuff@meredrica.org"
 git config --global user.name "meredrica"
 git config --global rerere.enabled true
-git config --global push.default simple
+git config --global push.default upstream
 
-# install yay
+ install yay
 cd /tmp
 git clone https://aur.archlinux.org/yay.git
 
