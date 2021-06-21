@@ -49,11 +49,11 @@ yay --noconfirm --needed -S \
 	qpdfview \
 	sxiv \
 	task \
+	tealdeer-bin \
 	texlive-most\
 	thefuck \
 	thunderbird \
 	timew \
-	tldr \
 	ttf-dejavu \
 	unzip \
 	vim \
@@ -66,3 +66,6 @@ yay --noconfirm --needed -S \
 	zip \
 	zsh-autosuggestions \
 	zsh-syntax-highlighting \
+	nvim \
+	python-pynvim \
+	xclip \
