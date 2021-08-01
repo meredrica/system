@@ -161,7 +161,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " open nerdtree by default instead of empty buffer
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p | endif
+autocmd VimEnter * NERDTree | wincmd p
 
 " close nerd tree if it's the last buffer
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
