@@ -34,8 +34,8 @@ set wrap " wrap terribly long lines
 let mapleader=","
 
 " ,V and ,v for opening and reloading the vimrc
-nnoremap <leader>V :vsplit ~/.vimrc<CR><C-W>
-nnoremap <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+nnoremap <leader>V :vsplit $MYVIMRC<CR><C-W>
+nnoremap <silent> <leader>v :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " move vertically by displayed line instead of real line
 nnoremap j gj
