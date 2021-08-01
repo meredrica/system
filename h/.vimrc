@@ -1,4 +1,4 @@
-" settings and flags {{{
+" settings and flags
 " some flags. keep em !sort-ed (V23j:!sort)
 set background=dark " dark background, helps a lot
 set backspace=2 " better backspace
@@ -25,9 +25,9 @@ set wildignore+=/**/*.class
 set wildmenu " a lot better command-line completion
 set wildmode=list:longest " even better command-line completion
 set wrap " wrap terribly long lines
-"}}}
 
-" keymappings {{{
+
+" keymappings
 " ===============
 
 " set the leader to comma
@@ -86,9 +86,7 @@ inoremap <leader>F (╯°□°)╯︵ ┻━┻
 
 autocmd FileType todo let maplocalleader = ","
 
-"}}}
-
-" plugins {{{
+" plugins
 " ===============
 
 " automagically install plugin management and all plugins if they are not present
@@ -145,25 +143,24 @@ syntax on " enable syntax coloring
 filetype on " enable filetype detection
 filetype indent on " indent based on filetype
 filetype plugin on " find filtypes by plugin
-"}}}
 
-" UI {{{
+
+" UI
 " ===============
 
 " improve autocomplete menu color
 " find settings with :highlight
 highlight Pmenu ctermbg=black ctermfg=white
 highlight PmenuSel ctermfg=yellow
-"}}}
 
-" NERDtree {{{
+" NERDtree
 " ===============
 
 " show hidden files
 let NERDTreeShowHidden=1
-"}}}
 
-" automagic stuff {{{
+
+" automagic stuff
 " ===============
 
 " autofold this file with markers
@@ -182,9 +179,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p |
 " close nerd tree if it's the last buffer
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"}}}
 
-" conquer of completion functions {{{
+
+" conquer of completion functions
 " ===============
 
 function! s:check_back_space() abort
@@ -200,4 +197,4 @@ function! s:show_documentation()
     call CocActionAsync('doHover')
   endif
 endfunction
-"}}}
+
