@@ -84,8 +84,6 @@ inoremap <silent><expr> <c-@> coc#refresh()
 " because I can
 inoremap <leader>F (╯°□°)╯︵ ┻━┻
 
-autocmd FileType todo let maplocalleader = ","
-
 " plugins
 " ===============
 
