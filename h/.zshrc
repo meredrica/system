@@ -35,5 +35,7 @@ alias release='function _release(){ tag="$@"-$(date +'%Y-%m-%d_%H-%M'); echo $ta
 # fix ssh problems with alacritty
 alias ssh='TERM=xterm-256color ssh'
 [[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
+# switch to nvim from vim
+alias vim=nvim
 # zsh awesomeness
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

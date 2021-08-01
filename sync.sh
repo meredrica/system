@@ -1,6 +1,7 @@
 #!/bin/bash
 cp -v /home/meredrica/.zshrc ./h/
 cp -v /home/meredrica/.vimrc ./h/
+cp -v /home/meredrica/.config/nvim/init.vim ./h/.config/nvim/init.vim
 cp -v /home/meredrica/.config/awesome/rc.lua ./h/.config/awesome/rc.lua
 cp -v /home/meredrica/.config/alacritty/* ./h/.config/alacritty/
 cp -v /home/meredrica/.config/htop/* ./h/.config/htop/
