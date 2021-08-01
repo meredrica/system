@@ -125,13 +125,6 @@ Plug 'plasticboy/vim-markdown'
 " todo.txt
 Plug 'freitass/todo.txt-vim'
 
-" folding
-Plug 'pseewald/anyfold'
-" auto fold java
-autocmd Filetype java AnyFoldActivate
-let g:anyfold_identify_comments=2 " keep comments open
-
-
 call plug#end()
 
 syntax on " enable syntax coloring
@@ -147,6 +140,8 @@ filetype plugin on " find filtypes by plugin
 " find settings with :highlight
 highlight Pmenu ctermbg=black ctermfg=white
 highlight PmenuSel ctermfg=yellow
+highlight Folded ctermbg=magenta ctermfg=lightgrey
+
 
 " NERDtree
 " ===============
@@ -160,9 +155,6 @@ let NERDTreeShowHidden=1
 
 " autofold this file with markers
 autocmd BufEnter .vimrc setlocal foldmethod=marker
-
-" fold java with level 1
-autocmd FileType java setlocal foldlevel=1
 
 " remove whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
