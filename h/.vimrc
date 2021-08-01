@@ -102,7 +102,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jakar/vim-json'
 
 " conquer of completion
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets coc-kotlin'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets'}
 
 " plugin library from google
 " needed for google/vim-codefmt
@@ -121,9 +121,6 @@ Plug 'tpope/vim-fugitive'
 " tabular has to come first
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-
-" kotlin
-Plug 'udalov/kotlin-vim'
 
 " todo.txt
 Plug 'freitass/todo.txt-vim'
