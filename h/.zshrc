@@ -1,7 +1,7 @@
 #ZSH setup
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="meredrica"
-plugins=(battery autojump thefuck)
+plugins=(battery autojump thefuck oc)
 
 # User configuration
 
@@ -37,5 +37,6 @@ alias ssh='TERM=xterm-256color ssh'
 [[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
 # switch to nvim from vim
 alias vim=nvim
+alias bat=bat --tabs 2 --theme ansi
 # zsh awesomeness
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

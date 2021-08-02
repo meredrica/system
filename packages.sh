@@ -6,6 +6,7 @@ yay --noconfirm --needed -S \
 	autojump-rs \
 	awesome \
 	banner \
+	bat \
 	biber \
 	bitwarden-bin \
 	bitwarden-cli-bin \
