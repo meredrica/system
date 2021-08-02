@@ -1,5 +1,5 @@
 " some flags. keep em !sort-ed (V20j:!sort)
-let &showbreak = '->' " linebreak identifier
+let &showbreak = '-> ' " linebreak identifier
 set breakindent " indent wrapped/broken lines
 set breakindentopt=min:50,shift:2,sbr " have a minimum of 50 chars readable while wrapping, shift the wrap by 2 and show the break sign in the line number display
 set conceallevel=2 " Concealing
@@ -102,7 +102,7 @@ Plug 'jakar/vim-json'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets'}
 
 " comment highlighting
-Plug 'jbgutierrez/vim-better-comments'
+" Plug 'jbgutierrez/vim-better-comments'
 
 " vim show changed lines
 Plug 'airblade/vim-gitgutter'
