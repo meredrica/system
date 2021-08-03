@@ -104,6 +104,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-y
 " comment highlighting
 " Plug 'jbgutierrez/vim-better-comments'
 
+" nvim in my browser <3
+Plug 'glacambre/firenvim', {'do': 'firenvim#install(0)'}
+
 " vim show changed lines
 Plug 'airblade/vim-gitgutter'
 
@@ -135,6 +138,11 @@ highlight Pmenu ctermbg=black ctermfg=white
 highlight PmenuSel ctermfg=yellow
 highlight Folded ctermbg=magenta ctermfg=lightgrey
 
+" firenvim
+" ===============
+if exists('g:started_by_firenvim')
+	set laststatus=0
+end
 
 " NERDtree
 " ===============
@@ -150,7 +158,9 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " open nerdtree by default instead of empty buffer
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | wincmd p
+if !exists('g:started_by_firenvim')
+	autocmd VimEnter * NERDTree | wincmd p
+end
 
 " close nerd tree if it's the last buffer
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
