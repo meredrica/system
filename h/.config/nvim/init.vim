@@ -77,7 +77,7 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-@> coc#refresh()
+inoremap <silent><expr><c-space> coc#refresh()
 
 " because I can
 inoremap <leader>F (╯°□°)╯︵ ┻━┻
