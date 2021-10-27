@@ -1,0 +1,9 @@
+{
+	"java.completion.overwrite": false,
+	"java.completion.guessMethodArguments": true,
+	"java.format.enabled": true,
+	"java.format.settings.url": "/home/meredrica/.config/nvim/format.xml",
+	"java.format.onType.enabled": true,
+	"java.maven.downloadSources": true,
+	"java.codeGeneration.hashCodeEquals.useJava7Objects": true
+}
