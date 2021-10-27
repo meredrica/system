@@ -24,6 +24,7 @@ yay --noconfirm --needed -S \
 	frei0r-plugins \
 	fzf \
 	gimp \
+	glab \
 	go-chroma \
 	graphviz \
 	gron-bin \

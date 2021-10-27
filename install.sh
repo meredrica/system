@@ -37,7 +37,7 @@ git config --global user.name "meredrica"
 git config --global rerere.enabled true
 git config --global push.default upstream
 
- install yay
+# install yay
 cd /tmp
 git clone https://aur.archlinux.org/yay.git
 
