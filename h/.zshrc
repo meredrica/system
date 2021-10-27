@@ -38,5 +38,7 @@ alias ssh='TERM=xterm-256color ssh'
 # switch to nvim from vim
 alias vim=nvim
 alias bat='bat --tabs 2 --theme ansi'
+# i don't live in a 3rd world country
+alias cal='cal -m'
 # zsh awesomeness
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
