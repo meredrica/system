@@ -49,7 +49,7 @@ vnoremap <leader>c "+y<CR>
 noremap <leader>F :NERDTreeFind<CR>
 
 " fuzzy file open
-let $FZF_DEFAULT_OPTS= '--query="!bin/ !target/ !build/ "'
+let $FZF_DEFAULT_OPTS= '--query="!bin/ !target/ !build/ !node_modules/ "'
 nnoremap <leader>o :FZF<CR>
 
 " go to definition etc.
@@ -99,7 +99,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jakar/vim-json'
 
 " conquer of completion
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-yaml coc-json coc-html coc-xml coc-snippets coc-tsserver coc-angular'}
 
 " comment highlighting
 " Plug 'jbgutierrez/vim-better-comments'
