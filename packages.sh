@@ -41,13 +41,16 @@ yay --noconfirm --needed -S \
 	lightdm \
 	lightdm-gtk-greeter \
 	maven \
+	nmap \
 	nodejs \
 	npm \
+	nvim \
 	openscad \
 	openssh \
 	pavucontrol \
 	pulseaudio \
 	pulseaudio-alsa \
+	python-pynvim \
 	qpdfview \
 	sxiv \
 	task \
@@ -60,6 +63,8 @@ yay --noconfirm --needed -S \
 	unzip \
 	vim \
 	vlc \
+	w3m \
+	xclip \
 	xf86-video-ati \
 	xorg-server \
 	xscreensaver \
@@ -68,6 +73,3 @@ yay --noconfirm --needed -S \
 	zip \
 	zsh-autosuggestions \
 	zsh-syntax-highlighting \
-	nvim \
-	python-pynvim \
-	xclip \

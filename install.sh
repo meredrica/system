@@ -50,6 +50,7 @@ yay --cleanafter --sudoloop --answerclean y --answerdiff n --answeredit n --save
 # install a lot of packages
 cd $DIR
 sh packages.sh
+sh node.sh
 
 EOF
 
