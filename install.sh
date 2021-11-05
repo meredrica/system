@@ -15,7 +15,10 @@ timedatectl set-ntp true
 
 # install base-devel and git
 pacman -Suy
-pacman -S --needed base-devel git zsh sudo openssh yajl wget --noconfirm
+pacman -S --needed base-devel git zsh sudo openssh yajl wget reflector --noconfirm
+
+# update mirrors
+reflector -c at,deh -f 10
 
 # create meredrica user
 useradd -m -G wheel -s /usr/bin/zsh meredrica

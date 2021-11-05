@@ -8,8 +8,8 @@ yay --noconfirm --needed -S \
 	banner \
 	bat \
 	biber \
-	bitwarden-bin \
-	bitwarden-cli-bin \
+	bitwarden \
+	bitwarden-cli \
 	brave-bin \
 	cifs-utils \
 	code \
@@ -54,7 +54,7 @@ yay --noconfirm --needed -S \
 	qpdfview \
 	sxiv \
 	task \
-	tealdeer-bin \
+	tealdeer \
 	texlive-most\
 	thefuck \
 	thunderbird \
