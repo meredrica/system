@@ -44,7 +44,7 @@ yay --noconfirm --needed -S \
 	nmap \
 	nodejs \
 	npm \
-	nvim \
+	neovim \
 	openscad \
 	openssh \
 	pavucontrol \

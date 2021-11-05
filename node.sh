@@ -1,5 +1,5 @@
 #!/bin/sh
-npm install -g \
+sudo npm install -g \
 	nb.sh #notebook
 
 # update completions for nb

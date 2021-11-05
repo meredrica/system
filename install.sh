@@ -30,6 +30,10 @@ sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 # change to user
 su meredrica <<'EOF'
+# save current dir
+# KEEP THIS, we need it twice
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo $DIR
 cd ~
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -55,8 +59,6 @@ cd $DIR
 ./packages.sh
 ./node.sh
 
-# cleanup
-yay -c
 EOF
 
 # enable a few things we need
