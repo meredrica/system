@@ -55,6 +55,8 @@ cd $DIR
 ./packages.sh
 ./node.sh
 
+# cleanup
+yay -c
 EOF
 
 # enable a few things we need
@@ -72,5 +74,3 @@ cd $DIR
 cp -rT ./h/ /home/meredrica
 chown meredrica:meredrica /home/meredrica -R
 
-# cleanup
-yay -c
