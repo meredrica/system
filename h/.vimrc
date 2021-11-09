@@ -27,6 +27,7 @@ set wildmode=list:longest " even better command-line completion
 set wrap " wrap terribly long lines
 
 
+
 " keymappings
 " ===============
 
@@ -121,6 +122,8 @@ Plug 'tpope/vim-fugitive'
 " tabular has to come first
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+" disable the automatic folding (it breaks things)
+let g:vim_markdown_folding_disabled = 1
 
 " todo.txt
 Plug 'freitass/todo.txt-vim'
@@ -153,9 +156,6 @@ let NERDTreeShowHidden=1
 " automagic stuff
 " ===============
 
-" autofold this file with markers
-autocmd BufEnter .vimrc setlocal foldmethod=marker
-
 " remove whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -165,7 +165,6 @@ autocmd VimEnter * NERDTree | wincmd p
 
 " close nerd tree if it's the last buffer
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 
 
 " conquer of completion functions
