@@ -56,7 +56,6 @@ yay --noconfirm --needed -S \
 	task \
 	tealdeer \
 	texlive-most\
-	thefuck \
 	thunderbird \
 	timew \
 	ttf-dejavu \
@@ -72,4 +71,5 @@ yay --noconfirm --needed -S \
 	zathura-pdf-poppler \
 	zip \
 	zsh-autosuggestions \
+	zsh-completions \
 	zsh-syntax-highlighting \
