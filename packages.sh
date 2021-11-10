@@ -37,16 +37,20 @@ yay --noconfirm --needed -S \
 	jq \
 	kdenlive \
 	latex-make \
+	libnma \
 	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
 	maven \
+	mdcat \
+	neovim \
+	networkmanager-openvpn |
 	nmap \
 	nodejs \
 	npm \
-	neovim \
 	openscad \
 	openssh \
+	openvpn \
 	pavucontrol \
 	pulseaudio \
 	pulseaudio-alsa \
