@@ -27,7 +27,6 @@ set wildmode=list:longest " even better command-line completion
 set wrap " wrap terribly long lines
 
 
-
 " keymappings
 " ===============
 
