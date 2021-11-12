@@ -17,9 +17,11 @@ alias brave-insecure='brave --disable-web-security --user-data-dir=/home/meredri
 # fuzzy history search
 alias fh='function _fh(){ fh="$@"; history | fzf -m -q "$fh" };_fh'
 # curl with defaults for dev
-alias c='curl -vvv -H "Content-Type: application/json" $@'
+alias c='curl --insecure -vvv -H "Content-Type: application/json"'
 # type less maven
-alias mci="mvn clean install -T4C -ff $@"
+alias mci="mvn clean install -T4C -ff"
+# type less maven and fuck all thests
+alias mcis="mvn clean install -T4C -ff -DskipTests"
 # grep is hard
 alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
 # git log with relative date and author

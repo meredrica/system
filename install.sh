@@ -73,6 +73,6 @@ ln -s /etc/fonts/conf.avail/65-ttf-droid-serif.conf /etc/fonts/conf.d/
 
 # copy all the configs etc
 cd $DIR
-cp -rT ./h/ /home/meredrica
+cp -vrT ./h/ /home/meredrica
 chown meredrica:meredrica /home/meredrica -R
 
