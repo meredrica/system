@@ -1,6 +1,7 @@
 #!/bin/sh
 sudo npm install -g \
-	nb.sh #notebook
+	hueadm \ #lights
+	nb.sh \ #notebook
 
 # update completions for nb
 "$(which nb)" completions install
