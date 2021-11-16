@@ -65,7 +65,6 @@ yay --noconfirm --needed -S \
 	timew \
 	ttf-dejavu \
 	unzip \
-	vim \
 	vlc \
 	w3m \
 	xclip \
