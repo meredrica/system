@@ -45,7 +45,7 @@ yay --noconfirm --needed -S \
 	maven \
 	mdcat \
 	neovim \
-	networkmanager-openvpn |
+	networkmanager-openvpn \
 	nmap \
 	nodejs \
 	npm \
