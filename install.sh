@@ -43,6 +43,7 @@ git config --global user.email "stuff@meredrica.org"
 git config --global user.name "meredrica"
 git config --global rerere.enabled true
 git config --global push.default upstream
+git config --global core.editor nvim
 
 # install yay
 cd /tmp
