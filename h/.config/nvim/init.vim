@@ -117,6 +117,9 @@ Plug 'tpope/vim-fugitive'
 " tabular has to come first
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+" disable the automatic folding (it breaks things)
+let g:vim_markdown_folding_disabled = 1
+
 
 " todo.txt
 Plug 'freitass/todo.txt-vim'

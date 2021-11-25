@@ -9,7 +9,7 @@
 	helper = store
 [core]
 	autocrlf = input
-	editor = vim
+	editor = /usr/bin/nvim
 [fetch]
 	prune = true
 [help]
