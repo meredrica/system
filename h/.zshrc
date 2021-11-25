@@ -1,9 +1,42 @@
 #ZSH setup
+##### Battery percentage for rprompt
+function battery_is_charging() {
+		! acpi 2>/dev/null | command grep -v "rate information unavailable" | command grep -q '^Battery.*Discharging'
+}
+function battery_pct() {
+  # Sample output:
+	# Battery 0: Discharging, 0%, rate information unavailable
+	# Battery 1: Full, 100%
+	acpi 2>/dev/null | command awk -F, '
+		/rate information unavailable/ { next }
+		/^Battery.*: /{ gsub(/[^0-9]/, "", $2); print $2; exit }
+	'
+}
+
+function battery_pct_prompt() {
+	if battery_is_charging; then
+		echo ""
+	else
+	local battery_pct=$(battery_pct)
+		local color;
+		if [[ $battery_pct -gt 50 ]]; then
+			color='green'
+		elif [[ $battery_pct -gt 20 ]]; then
+			color='yellow'
+		else
+			color='red'
+		fi
+		echo " %{$fg[$color]%}${battery_pct}%%"
+	fi
+}
+### end of battery rprompt
+
+# current time in 24hh:mm:ss, battery status
+RPROMPT='%*$(battery_pct_prompt)%{$reset_color%}'
+
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="meredrica"
-plugins=(battery)
 
-# User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin"
 # if i ever use python then i use pipenv
 export PIPENV_VENV_IN_PROJECT=1
