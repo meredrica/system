@@ -42,6 +42,8 @@ yay --noconfirm --needed -S \
 	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
+	man-db \
+	man-pages \
 	maven \
 	mdcat \
 	neovim \

@@ -38,7 +38,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="meredrica"
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin"
-# if i ever use python then i use pipenv
+# if I ever use python then i use pipenv
 export PIPENV_VENV_IN_PROJECT=1
 export EDITOR='nvim'
 export SDKMAN_DIR="/home/meredrica/.sdkman"
