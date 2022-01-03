@@ -50,6 +50,7 @@ yay --noconfirm --needed -S \
 	networkmanager-openvpn \
 	nmap \
 	nodejs \
+	noto-fonts-emoji \
 	npm \
 	openscad \
 	openssh \

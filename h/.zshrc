@@ -1,23 +1,22 @@
-#ZSH setup
-##### Battery percentage for rprompt
-function battery_is_charging() {
-		! acpi 2>/dev/null | command grep -v "rate information unavailable" | command grep -q '^Battery.*Discharging'
-}
-function battery_pct() {
+autoload -U compinit compaudit colors
+colors
+compinit -i
+setopt promptsubst
+
+# ZSH setup
+# some of this stuff is ripped out of zsh plugins
+function battery_prompt() {
+	local charging=$(! acpi 2>/dev/null | command grep -v "rate information unavailable" | command grep -q '^Battery.*Discharging')
+	if [[ $charging ]]; then
+		echo ""
+	else
   # Sample output:
 	# Battery 0: Discharging, 0%, rate information unavailable
 	# Battery 1: Full, 100%
-	acpi 2>/dev/null | command awk -F, '
+	local battery_pct=$(acpi 2>/dev/null | command awk -F, '
 		/rate information unavailable/ { next }
 		/^Battery.*: /{ gsub(/[^0-9]/, "", $2); print $2; exit }
-	'
-}
-
-function battery_pct_prompt() {
-	if battery_is_charging; then
-		echo ""
-	else
-	local battery_pct=$(battery_pct)
+	')
 		local color;
 		if [[ $battery_pct -gt 50 ]]; then
 			color='green'
@@ -29,22 +28,60 @@ function battery_pct_prompt() {
 		echo " %{$fg[$color]%}${battery_pct}%%"
 	fi
 }
-### end of battery rprompt
+
+function git_prompt() {
+	local git_color="%{$fg[yellow]%}"
+	local info=$(git status --porcelain --branch 2>/dev/null)
+	local prompt;
+	local changes='';
+	if [[ $info == \#\#* ]]; then;
+		# we have a branch
+		# check if there are changes
+		if [[ $( echo $info | grep -c '^') > 1  ]]; then;
+			changes="%{$fg_bold[red]%}!$git_color";
+		fi
+		if [[ $info == *no\ branch* ]]; then
+			# no branch info
+			prompt=$(git rev-parse --short HEAD 2>/dev/null)
+		else
+			# branch name is the second field
+			prompt=$(git branch --show-current 2>/dev/null);
+		fi
+		echo " $git_color<$prompt$changes>%{$reset_color%}";
+	fi;
+}
+
+# the path, with home as ~
+path_prompt() {
+	echo "${PWD/#$HOME/~}"
+}
+# user color
+if [ $UID -eq 0 ]; then user_color="red"; else user_color="magenta"; fi
+# ssh color
+if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then ssh_color="yellow"; else ssh_color="green"; fi
+# now use the colors and define some variables for the prompts
+# last return code as green or red smiley
+local return_code="%(?.%{$fg_bold[green]%}:)%{$reset_color%}.%{$fg_bold[red]%}:(%{$reset_color%})"
+# user bold and in user color
+local user="%{$fg_bold[$user_color]%}${USERNAME[1]}%{$reset_color%}"
+
+#host bold and in ssh color
+local host="%{$fg_bold[$ssh_color]%}%m%{$reset_color%}"
+
+local return_code="%(?.%{$fg_bold[green]%}:).%{$fg_bold[red]%}:()%{$reset_color%}"
 
 # current time in 24hh:mm:ss, battery status
-RPROMPT='%*$(battery_pct_prompt)%{$reset_color%}'
+RPROMPT='%*$(battery_prompt)%{$reset_color%}'
 
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="meredrica"
+PROMPT='$user@${host} $(path_prompt)$(git_prompt) ${return_code} '
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin"
-# if I ever use python then i use pipenv
+# if I ever use python then I use pipenv
 export PIPENV_VENV_IN_PROJECT=1
 export EDITOR='nvim'
 export SDKMAN_DIR="/home/meredrica/.sdkman"
 
-source $ZSH/oh-my-zsh.sh
-
+alias l='ls -la'
 # developing localhost without security ftw
 alias brave-insecure='brave --disable-web-security --user-data-dir=/home/meredrica/insecure'
 # fuzzy history search
