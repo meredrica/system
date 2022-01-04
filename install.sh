@@ -35,8 +35,6 @@ su meredrica <<'EOF'
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo $DIR
 cd ~
-# install oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # set git stuff
 git config --global user.email "stuff@meredrica.org"
