@@ -7,16 +7,16 @@ setopt promptsubst
 # some of this stuff is ripped out of zsh plugins
 function battery_prompt() {
 	local charging=$(! acpi 2>/dev/null | command grep -v "rate information unavailable" | command grep -q '^Battery.*Discharging')
-	if [[ $charging ]]; then
+	local battery_pct=$(acpi 2>/dev/null | command awk -F, '
+		/rate information unavailable/ { next }
+		/^Battery.*: /{ gsub(/[^0-9]/, "", $2); print $2; exit }
+	')
+	if [ $charging ] || [ ! $battery_pct ]; then
 		echo ""
 	else
   # Sample output:
 	# Battery 0: Discharging, 0%, rate information unavailable
 	# Battery 1: Full, 100%
-	local battery_pct=$(acpi 2>/dev/null | command awk -F, '
-		/rate information unavailable/ { next }
-		/^Battery.*: /{ gsub(/[^0-9]/, "", $2); print $2; exit }
-	')
 		local color;
 		if [[ $battery_pct -gt 50 ]]; then
 			color='green'
