@@ -1,7 +1,20 @@
-autoload -U compinit compaudit colors
+# TODO
+# - https://www.masterzen.fr/2009/04/19/in-love-with-zsh-part-one/
+# - split into multiple files
+#
+# completions
+autoload -U compinit
+# color support
+autoload -U colors
+# up arrow history magic
+autoload -U up-line-or-beginning-search
+# down arrow history magic
+autoload -U down-line-or-beginning-search
+
+# enable colors in shell commands
 colors
+# completions
 compinit -i
-setopt promptsubst
 
 # ZSH setup
 # some of this stuff is ripped out of zsh plugins
@@ -30,6 +43,7 @@ function battery_prompt() {
 }
 
 function git_prompt() {
+	# FIXME: use the vcs_info stuff from here https://voracious.dev/a-guide-to-customizing-the-zsh-shell-prompt
 	local git_color="%{$fg[yellow]%}"
 	local info=$(git status --porcelain --branch 2>/dev/null)
 	local prompt;
@@ -76,11 +90,26 @@ RPROMPT='%*$(battery_prompt)%{$reset_color%}'
 PROMPT='$user@${host} $(path_prompt)$(git_prompt) ${return_code} '
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin"
+
 # if I ever use python then I use pipenv
 export PIPENV_VENV_IN_PROJECT=1
 export EDITOR='nvim'
 export SDKMAN_DIR="/home/meredrica/.sdkman"
 
+# set the history file location
+HISTFILE="$HOME/.zsh_history"
+# set the max size
+HISTSIZE=50000
+# set the maximum history length
+SAVEHIST=10000
+
+# colorize grep
+alias grep='grep --color'
+# show full history
+alias history='history 1'
+# colorize ls
+alias ls='ls --color=auto'
+# lazy shorthand
 alias l='ls -la'
 # developing localhost without security ftw
 alias brave-insecure='brave --disable-web-security --user-data-dir=/home/meredrica/insecure'
@@ -102,17 +131,47 @@ alias stern="stern --template '{{color .PodColor .PodName}} {{.Message}}{{\"\n\"
 alias release='function _release(){ tag="$@"-$(date +'%Y-%m-%d_%H-%M'); echo $tag; git tag -a $tag && git push --tags};_release'
 # fix ssh problems with alacritty
 alias ssh='TERM=xterm-256color ssh'
-# needs to be run for sdkman
-[[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
 # switch to nvim from vim
 alias vim=nvim
 # better bat display
 alias bat='bat --tabs 2 --theme ansi'
 # i don't live in a 3rd world country
 alias cal='cal -m'
+
+# needs to be run for sdkman
+[[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
 # zsh awesomeness
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # oc completions
 source <(oc completion zsh)
 # autojump
 source /usr/share/autojump/autojump.zsh
+# source all scripts
+for f (~/.config/zsh/*.zsh) source $f
+
+# prompt variable substitution
+setopt promptsubst
+# record timestamp of command in HISTFILE
+setopt extended_history
+# ignore duplicated commands history list
+setopt hist_ignore_dups
+# ignore commands that start with space
+setopt hist_ignore_space
+# show command with history expansion to user before running it
+setopt hist_verify
+# share command history data
+setopt share_history
+# push to the dir stack automatically
+setopt auto_pushd
+# bind key up to history magic
+bindkey "^[[A" up-line-or-beginning-search # Up
+# bind key down to history magic
+bindkey "^[[B" down-line-or-beginning-search # Down
+
+# enable up arrow history magic
+zle -N up-line-or-beginning-search
+# enable down arrow history magic
+zle -N down-line-or-beginning-search
+
+# menu completion highlighting
+zstyle ':completion:*' menu select
