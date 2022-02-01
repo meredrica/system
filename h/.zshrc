@@ -16,7 +16,11 @@ colors
 # completions
 compinit -i
 
-# ZSH setup
+# smart case
+# TODO: figure out this syntax.
+zstyle ':completion:*' matcher-list '' '+m:{a-zA-Z}={A-Za-z}' '+r:|[._-]=* r:|=*' '+l:|=* r:|=*'
+
+# prompt setup
 # some of this stuff is ripped out of zsh plugins
 function battery_prompt() {
 	local charging=$(! acpi 2>/dev/null | command grep -v "rate information unavailable" | command grep -q '^Battery.*Discharging')
