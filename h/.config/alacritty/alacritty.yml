@@ -1,6 +1,10 @@
 window:
   decorations: none
 
+font:
+  normal:
+    family: "Dejavu Sans Mono"
+
 cursor:
   style:
     blinking: On
