@@ -132,7 +132,7 @@ alias gl="git log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset 
 # better stern output
 alias stern="stern --template '{{color .PodColor .PodName}} {{.Message}}{{\"\n\"}}'"
 # tag a project with a timestamp and push it
-alias release='function _release(){ tag="$@"/$(date +'%Y-%m-%d_%H-%M'); echo $tag; git tag -a $tag && git push $tag};_release'
+alias release='function _release(){ tag="$@"/$(date +'%Y-%m-%d_%H-%M'); echo $tag; git tag -a $tag && git push origin $tag};_release'
 # fix ssh problems with alacritty
 alias ssh='TERM=xterm-256color ssh'
 # switch to nvim from vim
