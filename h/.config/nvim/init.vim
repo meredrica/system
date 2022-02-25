@@ -105,7 +105,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-y
 " Plug 'jbgutierrez/vim-better-comments'
 
 " nvim in my browser <3
-Plug 'glacambre/firenvim', {'do': 'firenvim#install(0)'}
+" Plug 'glacambre/firenvim', {'do': 'firenvim#install(0)'}
 
 " vim show changed lines
 Plug 'airblade/vim-gitgutter'
@@ -119,10 +119,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 " disable the automatic folding (it breaks things)
 let g:vim_markdown_folding_disabled = 1
-
-
-" todo.txt
-Plug 'freitass/todo.txt-vim'
 
 call plug#end()
 
