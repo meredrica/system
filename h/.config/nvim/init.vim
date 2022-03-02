@@ -91,6 +91,12 @@ if empty(glob(stdpath('data') . '/site/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" git commands
+nnoremap <leader>ga :Git add -p<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gs :Git status<CR>
+nnoremap <leader>gp :Git push<CR>
+
 call plug#begin(stdpath('data') . '/plugged')
 
 " file explorer
