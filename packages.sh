@@ -1,5 +1,5 @@
 #!/bin/sh
-yay --noconfirm --needed -S \
+yay --noredownload --noconfirm --needed -S \
 	acpi \
 	alacritty \
 	arandr \
@@ -24,11 +24,12 @@ yay --noconfirm --needed -S \
 	frei0r-plugins \
 	fzf \
 	gimp \
-	gitlab-glab-bin \
 	glab \
 	go-chroma \
+	go-yq \
 	graphviz \
 	gron-bin \
+	helm \
 	htop \
 	hugo \
 	imagemagick \
@@ -60,6 +61,7 @@ yay --noconfirm --needed -S \
 	pulseaudio-alsa \
 	python-pynvim \
 	qpdfview \
+	stern \
 	sxiv \
 	task \
 	tealdeer \

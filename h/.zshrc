@@ -123,7 +123,7 @@ alias fh='function _fh(){ fh="$@"; history | fzf -m -q "$fh" };_fh'
 alias c='curl --insecure -vvv -H "Content-Type: application/json"'
 # type less maven
 alias mci="mvn clean install -T4C -ff"
-# type less maven and fuck all thests
+# type less maven and fuck all tests
 alias mcis="mvn clean install -T4C -ff -DskipTests"
 # grep is hard
 alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
@@ -146,8 +146,6 @@ alias cal='cal -m'
 [[ -s "/home/meredrica/.sdkman/bin/sdkman-init.sh" ]] && source "/home/meredrica/.sdkman/bin/sdkman-init.sh"
 # zsh awesomeness
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# oc completions
-source <(oc completion zsh)
 # autojump
 source /usr/share/autojump/autojump.zsh
 # source all scripts

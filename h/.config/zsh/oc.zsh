@@ -1,0 +1,1 @@
+source <(oc completion zsh)
