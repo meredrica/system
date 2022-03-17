@@ -2,7 +2,7 @@
 # - https://www.masterzen.fr/2009/04/19/in-love-with-zsh-part-one/
 # - split into multiple files
 #
-# completions
+fpath=(~/.config/zsh/completions $fpath)
 autoload -U compinit
 # color support
 autoload -U colors
@@ -98,7 +98,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 # if I ever use python then I use pipenv
 export PIPENV_VENV_IN_PROJECT=1
 export EDITOR='nvim'
-export SDKMAN_DIR="/home/meredrica/.sdkman"
 
 # set the history file location
 HISTFILE="$HOME/.zsh_history"

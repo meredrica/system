@@ -8,6 +8,7 @@ cp -v /home/meredrica/.config/awesome/rc.lua ./h/.config/awesome/rc.lua
 cp -v /home/meredrica/.config/alacritty/* ./h/.config/alacritty/
 cp -v /home/meredrica/.config/htop/* ./h/.config/htop/
 cp -v /home/meredrica/.config/zsh/* ./h/.config/zsh/
+cp -v /home/meredrica/.config/zsh/completions/* ./h/.config/zsh/completions/
 cp -v /home/meredrica/.xprofile ./h/
 cp -v /home/meredrica/.gitconfig ./h/
 
