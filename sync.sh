@@ -1,4 +1,6 @@
 #!/bin/bash
+git pull
+
 cp -v /home/meredrica/.zshrc ./h/
 cp -v /home/meredrica/.vimrc ./h/
 cp -v /home/meredrica/.config/nvim/init.vim ./h/.config/nvim/init.vim
