@@ -20,3 +20,5 @@ alias krs=_k8_shell
 alias kpf=_k8_port_forward
 # context switch
 alias kc="kubectl config use-context"
+# save the keyboards!
+alias k=kubectl
