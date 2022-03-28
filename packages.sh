@@ -16,7 +16,6 @@ yay --noredownload --noconfirm --needed -S \
 	cups \
 	cura \
 	discord \
-	docker \
 	dolphin \
 	dolphin-plugins \
 	ffmpeg \
@@ -57,6 +56,8 @@ yay --noredownload --noconfirm --needed -S \
 	openssh \
 	openvpn \
 	pavucontrol \
+	podman \
+	podman-docker \
 	pulseaudio \
 	pulseaudio-alsa \
 	python-pynvim \
