@@ -98,6 +98,8 @@ nnoremap <leader>gs :Git status<CR>
 nnoremap <leader>gp :Git push<CR>
 
 call plug#begin(stdpath('data') . '/plugged')
+" github codepilot
+Plug 'github/copilot.vim', { 'do':'Copilot setup' }
 
 " file explorer
 Plug 'scrooloose/nerdtree'
