@@ -22,6 +22,12 @@ reflector -c at,deh -f 10
 
 # create meredrica user
 useradd -m -G wheel -s /usr/bin/zsh meredrica
+
+# podman rootless setup
+touch /etc/containers/nodocker
+touch /etc/subuid /etc/subgid
+usermod --add-subuids 100000-165535 --add-subgids 100000-165535 meredrica
+
 echo 'get PASSWORD for meredrica'
 passwd meredrica
 
@@ -57,6 +63,8 @@ yay --cleanafter --sudoloop --answerclean y --answerdiff n --answeredit n --save
 cd $DIR
 ./packages.sh
 ./node.sh
+
+podman system migrate
 
 EOF
 

@@ -57,6 +57,7 @@ yay --noredownload --noconfirm --needed -S \
 	openvpn \
 	pavucontrol \
 	podman \
+	podman-dnsname \
 	podman-docker \
 	pulseaudio \
 	pulseaudio-alsa \
