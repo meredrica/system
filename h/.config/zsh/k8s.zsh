@@ -22,3 +22,5 @@ alias kpf=_k8_port_forward
 alias kc="kubectl config use-context"
 # save the keyboards!
 alias k=kubectl
+# completions ftw
+source <(kubectl completion zsh)
