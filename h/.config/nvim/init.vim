@@ -128,6 +128,13 @@ Plug 'plasticboy/vim-markdown'
 " disable the automatic folding (it breaks things)
 let g:vim_markdown_folding_disabled = 1
 
+" required for diffview
+Plug 'nvim-lua/plenary.nvim'
+" icons for diffview
+Plug 'kyazdani42/nvim-web-devicons'
+" diffview
+Plug 'sindrets/diffview.nvim'
+
 call plug#end()
 
 syntax on " enable syntax coloring

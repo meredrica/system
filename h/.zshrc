@@ -125,7 +125,7 @@ alias mci="mvn clean install -T4C -ff"
 # type less maven and fuck all tests
 alias mcis="mvn clean install -T4C -ff -DskipTests"
 # grep is hard
-alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin} "$icanhaz" -C3 .};_icanhaz'
+alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin,build} "$icanhaz" -C3 .};_icanhaz'
 # git log with relative date and author
 alias gl="git log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 # better stern output
