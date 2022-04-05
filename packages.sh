@@ -47,10 +47,10 @@ yay --noredownload --noconfirm --needed -S \
 	maven \
 	mdcat \
 	neovim \
+	nerd-fonts-complete \
 	networkmanager-openvpn \
 	nmap \
 	nodejs \
-	noto-fonts-emoji \
 	npm \
 	openscad \
 	openssh \

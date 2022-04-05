@@ -78,6 +78,7 @@ ln -s /etc/fonts/conf.avail/65-ttf-droid-sans.conf /etc/fonts/conf.d/
 ln -s /etc/fonts/conf.avail/65-ttf-droid-serif.conf /etc/fonts/conf.d/
 
 
+
 # copy all the configs etc
 cd $DIR
 ./install-configs.sh
