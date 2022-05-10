@@ -57,7 +57,7 @@ cd /tmp/yay
 makepkg -sri --noconfirm
 
 # set the yay flags
-yay --cleanafter --sudoloop --answerclean y --answerdiff n --answeredit n --save
+yay --cleanafter --sudoloop --answerclean y --answerdiff n --answeredit n --removemake --noredownload --save
 
 # install a lot of packages
 cd $DIR

@@ -2,8 +2,14 @@
 # - https://www.masterzen.fr/2009/04/19/in-love-with-zsh-part-one/
 # - split into multiple files
 #
+# smart case
+# TODO: figure out this syntax.
+zstyle ':completion:*' matcher-list '' '+m:{a-zA-Z}={A-Za-z}' '+r:|[._-]=* r:|=*' '+l:|=* r:|=*'
+
+
 fpath=(~/.config/zsh/completions $fpath)
 autoload -U compinit
+autoload -U bashcompinit
 # color support
 autoload -U colors
 # up arrow history magic
@@ -15,10 +21,8 @@ autoload -U down-line-or-beginning-search
 colors
 # completions
 compinit -i
+bashcompinit
 
-# smart case
-# TODO: figure out this syntax.
-zstyle ':completion:*' matcher-list '' '+m:{a-zA-Z}={A-Za-z}' '+r:|[._-]=* r:|=*' '+l:|=* r:|=*'
 
 # prompt setup
 # some of this stuff is ripped out of zsh plugins
@@ -121,9 +125,9 @@ alias fh='function _fh(){ fh="$@"; history | fzf -m -q "$fh" };_fh'
 # curl with defaults for dev
 alias c='curl --insecure -vvv -H "Content-Type: application/json"'
 # type less maven
-alias mci="mvn clean install -T4C -ff"
+alias mci="mvn clean install -T8C -ff"
 # type less maven and fuck all tests
-alias mcis="mvn clean install -T4C -ff -DskipTests"
+alias mcis="mvn clean install -T8C -ff -DskipTests"
 # grep is hard
 alias icanhaz='function _icanhaz(){ icanhaz="$@"; grep -HnIir --exclude-dir={.git,target,bin,build} "$icanhaz" -C3 .};_icanhaz'
 # git log with relative date and author

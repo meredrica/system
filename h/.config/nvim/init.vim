@@ -113,7 +113,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':':CocInstall coc-java coc-y
 " Plug 'jbgutierrez/vim-better-comments'
 
 " nvim in my browser <3
-" Plug 'glacambre/firenvim', {'do': 'firenvim#install(0)'}
+Plug 'glacambre/firenvim', {'do': 'firenvim#install(0)'}
 
 " vim show changed lines
 Plug 'airblade/vim-gitgutter'
@@ -156,6 +156,9 @@ highlight Folded ctermbg=magenta ctermfg=lightgrey
 " ===============
 if exists('g:started_by_firenvim')
 	set laststatus=0
+	autocmd InsertLeave * ++nested write
+	"autocmd TextChanged * ++nested write
+	"autocmd TextChangedI * ++nested write
 end
 
 " NERDtree
