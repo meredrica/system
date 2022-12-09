@@ -27,7 +27,7 @@ yay --noredownload --noconfirm --needed -S \
 	go-chroma \
 	go-yq \
 	graphviz \
-	gron-bin \
+	gron \
 	helm \
 	htop \
 	hugo \
@@ -47,22 +47,23 @@ yay --noredownload --noconfirm --needed -S \
 	maven \
 	mdcat \
 	neovim \
-	nerd-fonts-complete \
 	networkmanager-openvpn \
 	nmap \
 	nodejs \
+	noto-fonts-emoji\
 	npm \
 	openscad \
 	openssh \
 	openvpn \
 	pavucontrol \
+	pipewire-alsa \
+	pipewire-pulse \
 	podman \
 	podman-dnsname \
 	podman-docker \
-	pulseaudio \
-	pulseaudio-alsa \
 	python-pynvim \
 	qpdfview \
+	qpwgraph \
 	stern \
 	sxiv \
 	task \
@@ -74,6 +75,7 @@ yay --noredownload --noconfirm --needed -S \
 	unzip \
 	vlc \
 	w3m \
+	wireplumber \
 	xclip \
 	xf86-video-ati \
 	xorg-server \
