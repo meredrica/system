@@ -93,7 +93,7 @@ zstyle ':vcs_info:*' formats " $git_color<%b%u$git_color>%{$reset_color%}"
 
 PROMPT='$user@${host} $(path_prompt)$vcs_info_msg_0_ ${return_code} '
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin:/home/meredrica/.cargo/bin"
 
 # if I ever use python then I use pipenv
 export PIPENV_VENV_IN_PROJECT=1
