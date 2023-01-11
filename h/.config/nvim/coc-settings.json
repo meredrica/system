@@ -7,7 +7,8 @@
 	"java.format.onType.enabled": true,
 	"java.maven.downloadSources": true,
 	"java.codeGeneration.hashCodeEquals.useJava7Objects": true,
-	"coc.preferences.formatOnSaveFiletypes": [
-		"java"
-	]
+	"[java]": {
+		"coc.preferences.formatOnSave": true
+	},
+	"suggest.noselect": true
 }
