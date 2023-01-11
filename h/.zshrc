@@ -4,6 +4,7 @@
 #
 # smart case
 # TODO: figure out this syntax.
+# FIXME doesn't like '.' dirs. why?
 zstyle ':completion:*' matcher-list '' '+m:{a-zA-Z}={A-Za-z}' '+r:|[._-]=* r:|=*' '+l:|=* r:|=*'
 
 
@@ -17,12 +18,16 @@ autoload -U up-line-or-beginning-search
 # down arrow history magic
 autoload -U down-line-or-beginning-search
 
+# enable vcs_info
+autoload -Uz vcs_info
+# always run vcs_info before displaying the prompt
+precmd () { vcs_info }
+
 # enable colors in shell commands
 colors
 # completions
 compinit -i
 bashcompinit
-
 
 # prompt setup
 # some of this stuff is ripped out of zsh plugins
@@ -50,52 +55,43 @@ function battery_prompt() {
 	fi
 }
 
-function git_prompt() {
-	# FIXME: use the vcs_info stuff from here https://voracious.dev/a-guide-to-customizing-the-zsh-shell-prompt
-	local git_color="%{$fg[yellow]%}"
-	local info=$(git status --porcelain --branch 2>/dev/null)
-	local prompt;
-	local changes='';
-	if [[ $info == \#\#* ]]; then;
-		# we have a branch
-		# check if there are changes
-		if [[ $( echo $info | grep -c '^') > 1  ]]; then;
-			changes="%{$fg_bold[red]%}!$git_color";
-		fi
-		if [[ $info == *no\ branch* ]]; then
-			# no branch info
-			prompt=$(git rev-parse --short HEAD 2>/dev/null)
-		else
-			# branch name is the second field
-			prompt=$(git branch --show-current 2>/dev/null);
-		fi
-		echo " $git_color<$prompt$changes>%{$reset_color%}";
-	fi;
-}
-
 # the path, with home as ~
 path_prompt() {
 	echo "${PWD/#$HOME/~}"
 }
+
+# define some colors
 # user color
 if [ $UID -eq 0 ]; then user_color="red"; else user_color="magenta"; fi
-# ssh color
-if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then ssh_color="yellow"; else ssh_color="green"; fi
+# host color
+if [[ -n "$SSH_CLIENT" || -n "$SSH2_CLIENT" ]]; then host_color="yellow"; else host_color="green"; fi
+# git color
+local git_color="%{$fg[yellow]%}"
+
 # now use the colors and define some variables for the prompts
 # last return code as green or red smiley
 local return_code="%(?.%{$fg_bold[green]%}:)%{$reset_color%}.%{$fg_bold[red]%}:(%{$reset_color%})"
 # user bold and in user color
 local user="%{$fg_bold[$user_color]%}${USERNAME[1]}%{$reset_color%}"
 
-#host bold and in ssh color
-local host="%{$fg_bold[$ssh_color]%}%m%{$reset_color%}"
-
-local return_code="%(?.%{$fg_bold[green]%}:).%{$fg_bold[red]%}:()%{$reset_color%}"
+# host bold and in host color
+local host="%{$fg_bold[$host_color]%}%m%{$reset_color%}"
 
 # current time in 24hh:mm:ss, battery status
 RPROMPT='%*$(battery_prompt)%{$reset_color%}'
 
-PROMPT='$user@${host} $(path_prompt)$(git_prompt) ${return_code} '
+# enable only git vcs info
+zstyle ':vcs_info:*' enable git
+# use simple vcs info get for more speed
+zstyle ':vcs_info:*' use-simple true
+# enable changes check (expensive)
+zstyle ':vcs_info:*' check-for-changes true
+# format changes string as red exclamation mark
+zstyle ':vcs_info:*' unstagedstr "%{$fg_bold[red]%}!"
+# format git change as <branch!> with the $git_color
+zstyle ':vcs_info:*' formats " $git_color<%b%u$git_color>%{$reset_color%}"
+
+PROMPT='$user@${host} $(path_prompt)$vcs_info_msg_0_ ${return_code} '
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/node_modules:/usr/lib/jvm/default/bin"
 
