@@ -90,6 +90,7 @@ inoremap <silent><expr><c-space> coc#refresh()
 
 " because I can
 inoremap <leader>F (╯°□°)╯︵ ┻━┻
+inoremap <leader>C ☭<CR>
 
 " plugins
 " ===============
