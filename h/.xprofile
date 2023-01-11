@@ -1,3 +1,6 @@
 #!/bin/sh
 /home/meredrica/.screenlayout/default.sh
 setxkbmap us altgr-intl
+xfce4-power-manager --daemon
+blueman-applet &
+xscreensaver --no-splash &
