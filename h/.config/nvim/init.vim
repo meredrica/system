@@ -8,6 +8,7 @@ set cursorline " visual help
 set hidden " recommended by coc
 set ignorecase " ignore case on search
 set linebreak " don't randomly break in the middle of the line, use 'breakat' instead
+set mouse= " disable the mouse
 set number " line numbers
 set shiftwidth=2 " sane indent width
 set smartcase " if typing upcase letters in search, only search for exact matches
@@ -53,14 +54,18 @@ let $FZF_DEFAULT_OPTS= '--query="!bin/ !target/ !build/ !node_modules/ "'
 nnoremap <leader>o :FZF<CR>
 
 " go to definition etc.
-nmap <leader>d <Plug>(coc-definition)
-nmap <leader>i <Plug>(coc-implementation)
-nmap <leader>r <Plug>(coc-references)
-nmap <leader>R <Plug>(coc-rename)
-nmap <leader>f :CocFix<CR>
+nmap <silent> <leader>d <Plug>(coc-definition)
+nmap <silent> <leader>i <Plug>(coc-implementation)
+nmap <silent> <leader>r <Plug>(coc-references)
+nmap <silent> <leader>R <Plug>(coc-rename)
+nmap <silent> <leader>f <Plug>(coc-codeaction-line)
+nmap <silent> <leader>n <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>m <Plug>(coc-codeaction-refactor)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+" highlight automatically
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " map jj to escape key in insert mode
 inoremap jj <esc>
@@ -70,11 +75,15 @@ imap <leader>c <Plug>(coc-snippets-expand-jump)
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr><c-space> coc#refresh()
