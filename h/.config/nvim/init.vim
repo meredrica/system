@@ -156,16 +156,18 @@ filetype plugin on " find filtypes by plugin
 " improve autocomplete menu color
 " find settings with :highlight
 highlight Pmenu ctermbg=black ctermfg=white
-highlight PmenuSel ctermfg=yellow
-highlight Folded ctermbg=magenta ctermfg=lightgrey
+" highlight PmenuSel ctermbg=grey ctermfg=yellow
+highlight CocMenuSel ctermbg=grey
+" highlight DiagnosticHint ctermfg=yellow
+" highlight Folded ctermbg=magenta ctermfg=lightgrey
 
 " firenvim
 " ===============
 if exists('g:started_by_firenvim')
-	set laststatus=0
 	autocmd InsertLeave * ++nested write
-	"autocmd TextChanged * ++nested write
-	"autocmd TextChangedI * ++nested write
+	let &showbreak = '>'
+	set laststatus=0
+	set nonumber
 end
 
 " NERDtree
@@ -193,9 +195,9 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " conquer of completion functions
 " ===============
 
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]	=~# '\s'
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 
