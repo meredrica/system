@@ -15,13 +15,13 @@ timedatectl set-ntp true
 
 # install base things that are necessary
 pacman -Suy
-pacman -S --needed base-devel git zsh sudo openssh wget reflector yadm --noconfirm
+pacman -S --needed --noconfirm base-devel git zsh sudo openssh wget reflector yadm
 
 # update mirrors
 reflector --country at,de --fastest 20 --latest 100 --threads 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
 # create meredrica user
-useradd -m -G wheel -s /usr/bin/zsh meredrica
+useradd --create-home --groups wheel --shell /usr/bin/zsh meredrica
 
 # podman rootless setup
 touch /etc/containers/nodocker
