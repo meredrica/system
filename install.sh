@@ -13,9 +13,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo 'NTP=0.at.pool.ntp.org 1.at.pool.ntp.org 2.at.pool.ntp.org 3.at.pool.ntp.org' >> /etc/systemd/timesyncd.conf
 timedatectl set-ntp true
 
-# install base-devel and git
+# install base things that are necessary
 pacman -Suy
-pacman -S --needed base-devel git zsh sudo openssh yajl wget reflector --noconfirm
+pacman -S --needed base-devel git zsh sudo openssh wget reflector yadm --noconfirm
 
 # update mirrors
 reflector -c at,deh -f 10
@@ -40,14 +40,9 @@ su meredrica <<'EOF'
 # KEEP THIS, we need it twice
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo $DIR
-cd ~
 
-# set git stuff
-git config --global user.email "stuff@meredrica.org"
-git config --global user.name "meredrica"
-git config --global rerere.enabled true
-git config --global push.default upstream
-git config --global core.editor nvim
+# dotfiles setup
+yadm clone --bootstrap https://git.meredrica.org/meredrica/dotfiles.git
 
 # install yay
 cd /tmp
@@ -56,10 +51,7 @@ git clone https://aur.archlinux.org/yay.git
 cd /tmp/yay
 makepkg -sri --noconfirm
 
-# set the yay flags
-yay --cleanafter --sudoloop --answerclean y --answerdiff n --answeredit n --removemake --noredownload --save
-
-# install a lot of packages
+# install a lot of packages via yay
 cd $DIR
 ./packages.sh
 ./node.sh
@@ -76,10 +68,3 @@ ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono.conf /etc/fonts/conf.d/
 ln -s /etc/fonts/conf.avail/65-ttf-droid-kufi.conf /etc/fonts/conf.d/
 ln -s /etc/fonts/conf.avail/65-ttf-droid-sans.conf /etc/fonts/conf.d/
 ln -s /etc/fonts/conf.avail/65-ttf-droid-serif.conf /etc/fonts/conf.d/
-
-
-
-# copy all the configs etc
-cd $DIR
-./install-configs.sh
-chown meredrica:meredrica /home/meredrica -R

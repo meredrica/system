@@ -1,4 +1,7 @@
 #!/bin/sh
+# some dependencies are already installed via install.sh
+# we keep them around anyway so we have a nice list in one place
+#
 yay --noredownload --noconfirm --needed -S \
 	acpi \
 	alacritty \
@@ -82,6 +85,7 @@ yay --noredownload --noconfirm --needed -S \
 	xscreensaver \
 	zathura \
 	zathura-pdf-poppler \
+	yadm \
 	zip \
 	zsh-autosuggestions \
 	zsh-completions \
