@@ -18,7 +18,7 @@ pacman -Suy
 pacman -S --needed base-devel git zsh sudo openssh wget reflector yadm --noconfirm
 
 # update mirrors
-reflector -c at,deh -f 10
+reflector --country at,de --fastest 20 --latest 100 --threads 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
 # create meredrica user
 useradd -m -G wheel -s /usr/bin/zsh meredrica
@@ -54,9 +54,18 @@ makepkg -sri --noconfirm
 # install a lot of packages via yay
 cd $DIR
 ./packages.sh
-./node.sh
 
-podman system migrate
+# install sdkman
+curl -s "https://get.sdkman.io" | bash
+source /home/meredrica/.sdkman/bin/sdkman-init.sh
+
+# install java stuff
+sdk install java 21-open
+sdk install gradle
+sdk install maven
+
+# update tldr
+tldr --update
 
 EOF
 

@@ -4,60 +4,74 @@
 #
 yay --noredownload --noconfirm --needed -S \
 	acpi \
+	acpid \
 	alacritty \
 	arandr \
+	aspell \
+	aspell-de \
+	aspell-en \
 	autojump-rs \
 	awesome \
-	banner \
-	bat \
-	biber \
-	bitwarden \
-	bitwarden-cli \
+	base-devel \
+	bc \
+	blueman \
+	bluez-utils \
 	brave-bin \
-	cifs-utils \
 	code \
 	cups \
-	cura \
+	curl \
+	dbeaver \
 	discord \
+	docker \
+	docker-compose \
 	dolphin \
 	dolphin-plugins \
-	ffmpeg \
-	ffmpegthumbs \
-	frei0r-plugins \
+	epson-inkjet-printer-escpr \
+	evolution \
+	evolution-ews \
+	evolution-on \
+	fd \
+	filezilla \
+	flameshot \
 	fzf \
+	geary \
 	gimp \
+	git \
+	git-standup-git \
 	glab \
-	go-chroma \
-	go-yq \
-	graphviz \
 	gron \
 	helm \
 	htop \
 	hugo \
 	imagemagick \
 	inkscape \
-	jdk11-openjdk \
-	jdk-openjdk \
 	jq \
-	kdenlive \
+	kcm-wacomtablet \
+	kleopatra \
+	kubectl \
 	latex-make \
 	libnma \
 	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
+	lshw \
 	man-db \
 	man-pages \
-	maven \
 	mdcat \
 	neovim \
+	network-manager-applet \
 	networkmanager-openvpn \
-	nmap \
 	nodejs \
+	noto-fonts \
 	noto-fonts-emoji\
 	npm \
-	openscad \
+	obsidian \
+	okular \
+	ookla-speedtest-bin \
+	openshift-client-bin \
 	openssh \
 	openvpn \
+	pacman-mirrorlist \
 	pavucontrol \
 	pipewire-alsa \
 	pipewire-pulse \
@@ -66,27 +80,28 @@ yay --noredownload --noconfirm --needed -S \
 	podman-docker \
 	python-pynvim \
 	qpdfview \
-	qpwgraph \
+	reflector \
+	ripgrep \
+	rsync \
 	stern \
+	sudo \
 	sxiv \
-	task \
 	tealdeer \
 	texlive-most\
-	thunderbird \
 	timew \
 	ttf-dejavu \
 	unzip \
 	vlc \
-	w3m \
+	wget \
 	wireplumber \
 	xclip \
-	xf86-video-ati \
 	xorg-server \
 	xscreensaver \
-	zathura \
-	zathura-pdf-poppler \
 	yadm \
+	yq \
 	zip \
+	zoom \
+	zsh \
 	zsh-autosuggestions \
 	zsh-completions \
 	zsh-syntax-highlighting \
