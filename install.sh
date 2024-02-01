@@ -42,7 +42,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo $DIR
 
 # dotfiles setup
-yadm clone --bootstrap https://git.meredrica.org/meredrica/dotfiles.git
+yadm clone --bootstrap https://git.home.meredrica.org/meredrica/dotfiles.git
 
 # install yay
 cd /tmp
