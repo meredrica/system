@@ -40,6 +40,7 @@ yay --noredownload --noconfirm --needed -S \
 	git-standup-git \
 	glab \
 	gron \
+	grub \
 	helm \
 	htop \
 	hugo \
@@ -81,6 +82,7 @@ yay --noredownload --noconfirm --needed -S \
 	python-pynvim \
 	qpdfview \
 	reflector \
+	renameutils \
 	ripgrep \
 	rsync \
 	stern \
