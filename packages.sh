@@ -22,8 +22,6 @@ yay --noredownload --noconfirm --needed -S \
 	curl \
 	dbeaver \
 	discord \
-	docker \
-	docker-compose \
 	dolphin \
 	dolphin-plugins \
 	epson-inkjet-printer-escpr \
@@ -39,6 +37,7 @@ yay --noredownload --noconfirm --needed -S \
 	git \
 	git-standup-git \
 	glab \
+	gnome-keyring \
 	gron \
 	grub \
 	helm \

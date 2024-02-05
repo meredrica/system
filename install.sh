@@ -15,7 +15,7 @@ timedatectl set-ntp true
 
 # install base things that are necessary
 pacman -Suy
-pacman -S --needed --noconfirm base-devel git zsh sudo openssh wget reflector yadm
+pacman -S --needed --noconfirm base-devel git zsh sudo openssh wget reflector yadm go
 
 # update mirrors
 reflector --country at,de --fastest 20 --latest 100 --threads 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
@@ -32,7 +32,7 @@ echo 'get PASSWORD for meredrica'
 passwd meredrica
 
 # enable the wheel group
-sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 # change to user
 su meredrica <<'EOF'
@@ -60,7 +60,7 @@ curl -s "https://get.sdkman.io" | bash
 source /home/meredrica/.sdkman/bin/sdkman-init.sh
 
 # install java stuff
-sdk install java 21-open
+sdk install java
 sdk install gradle
 sdk install maven
 
