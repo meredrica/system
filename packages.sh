@@ -49,7 +49,6 @@ yay --noredownload --noconfirm --needed -S \
 	kcm-wacomtablet \
 	kleopatra \
 	kubectl \
-	latex-make \
 	libnma \
 	libreoffice-fresh \
 	lightdm \
@@ -88,8 +87,10 @@ yay --noredownload --noconfirm --needed -S \
 	sudo \
 	sxiv \
 	tealdeer \
-	texlive-most\
-	timew \
+	texlive-binextra \
+	texlive-fontsextra \
+	texlive-latexrecommended\
+	texlive-most \
 	ttf-dejavu \
 	unzip \
 	vlc \
