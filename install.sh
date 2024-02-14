@@ -72,6 +72,7 @@ EOF
 # enable a few things we need
 systemctl enable lightdm
 systemctl enable NetworkManager
+systemctl enable bluetooth
 
 # set default font to ttf-droid
 ln -s /etc/fonts/conf.avail/60-ttf-droid-sans-mono.conf /etc/fonts/conf.d/

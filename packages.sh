@@ -88,7 +88,7 @@ yay --noredownload --noconfirm --needed -S \
 	sxiv \
 	tealdeer \
 	texlive-binextra \
-	texlive-fontsextra \
+	texlive-latexextra \
 	texlive-latexrecommended\
 	texlive-most \
 	ttf-dejavu \
