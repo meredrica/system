@@ -14,7 +14,7 @@ yay --noredownload --noconfirm --needed -S \
 	awesome \
 	base-devel \
 	bc \
-	blueman \
+	betterbird-bin \
 	bluez-utils \
 	brave-bin \
 	code \
@@ -44,6 +44,7 @@ yay --noredownload --noconfirm --needed -S \
 	htop \
 	hugo \
 	imagemagick \
+	inetutils \
 	inkscape \
 	jq \
 	kcm-wacomtablet \
@@ -70,8 +71,10 @@ yay --noredownload --noconfirm --needed -S \
 	openshift-client-bin \
 	openssh \
 	openvpn \
+	overskride \
 	pacman-mirrorlist \
 	pavucontrol \
+	pciutils \
 	pipewire-alsa \
 	pipewire-pulse \
 	podman \
@@ -93,6 +96,7 @@ yay --noredownload --noconfirm --needed -S \
 	texlive-most \
 	ttf-dejavu \
 	unzip \
+	usbutils \
 	vlc \
 	wget \
 	wireplumber \
