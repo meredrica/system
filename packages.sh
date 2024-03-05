@@ -30,7 +30,6 @@ yay --noredownload --noconfirm --needed -S \
 	evolution-on \
 	fd \
 	filezilla \
-	flameshot \
 	fzf \
 	geary \
 	gimp \
@@ -86,6 +85,7 @@ yay --noredownload --noconfirm --needed -S \
 	renameutils \
 	ripgrep \
 	rsync \
+	scrot \
 	stern \
 	sudo \
 	sxiv \
