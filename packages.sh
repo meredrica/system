@@ -15,12 +15,14 @@ yay --noredownload --noconfirm --needed -S \
 	base-devel \
 	bc \
 	betterbird-bin \
+	bind \
 	bluez-utils \
 	brave-bin \
 	code \
 	cups \
 	curl \
 	dbeaver \
+	difftastic \
 	discord \
 	dolphin \
 	dolphin-plugins \
