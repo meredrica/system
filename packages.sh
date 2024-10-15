@@ -72,7 +72,6 @@ yay --noredownload --noconfirm --needed -S \
 	openshift-client-bin \
 	openssh \
 	openvpn \
-	overskride \
 	pacman-mirrorlist \
 	pavucontrol \
 	pciutils \
