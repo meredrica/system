@@ -31,13 +31,17 @@ yay --noredownload --noconfirm --needed -S \
 	evolution-ews \
 	evolution-on \
 	fd \
+	ffmpeg \
 	filezilla \
+	flameshot \
+	frei0r-plugins \
 	fzf \
-	geary \
 	gimp \
 	git \
+	git-lfs \
 	git-standup-git \
 	glab \
+	glow \
 	gnome-keyring \
 	gron \
 	grub \
@@ -49,7 +53,6 @@ yay --noredownload --noconfirm --needed -S \
 	inkscape \
 	jq \
 	kcm-wacomtablet \
-	kleopatra \
 	kubectl \
 	libnma \
 	libreoffice-fresh \
@@ -72,6 +75,7 @@ yay --noredownload --noconfirm --needed -S \
 	openshift-client-bin \
 	openssh \
 	openvpn \
+	openvpn-update-resolv-conf-git \
 	pacman-mirrorlist \
 	pavucontrol \
 	pciutils \
@@ -86,10 +90,13 @@ yay --noredownload --noconfirm --needed -S \
 	renameutils \
 	ripgrep \
 	rsync \
+	rustic \
 	scrot \
+	sshfs \
 	stern \
 	sudo \
 	sxiv \
+	tea \
 	tealdeer \
 	texlive-binextra \
 	texlive-latexextra \
@@ -100,8 +107,10 @@ yay --noredownload --noconfirm --needed -S \
 	unzip \
 	usbutils \
 	vlc \
+	wacomtablet \
 	wget \
 	wireplumber \
+	x11-emoji-picker \
 	xclip \
 	xorg-server \
 	xscreensaver \
