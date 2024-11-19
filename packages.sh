@@ -113,6 +113,7 @@ yay --noredownload --noconfirm --needed -S \
 	x11-emoji-picker \
 	xclip \
 	xorg-server \
+	xournalpp \
 	xscreensaver \
 	yadm \
 	yq \
