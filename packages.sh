@@ -96,6 +96,7 @@ yay --noredownload --noconfirm --needed -S \
 	texlive-latexrecommended\
 	texlive-most \
 	ttf-dejavu \
+	ttf-dejavu-nerd \
 	unzip \
 	usbutils \
 	vlc \
