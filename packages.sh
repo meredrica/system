@@ -114,6 +114,7 @@ yay --noredownload --noconfirm --needed -S \
 	yadm \
 	yq \
 	zip \
+	zk \
 	zoom \
 	zsh \
 	zsh-autosuggestions \
