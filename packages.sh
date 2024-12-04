@@ -12,13 +12,13 @@ yay --noredownload --noconfirm --needed -S \
 	aspell-en \
 	autojump-rs \
 	awesome \
+	bambustudio-bin \
 	base-devel \
 	bc \
 	betterbird-bin \
 	bind \
 	bluez-utils \
 	brave-bin \
-	code \
 	cups \
 	curl \
 	dbeaver \
@@ -27,9 +27,6 @@ yay --noredownload --noconfirm --needed -S \
 	dolphin \
 	dolphin-plugins \
 	epson-inkjet-printer-escpr \
-	evolution \
-	evolution-ews \
-	evolution-on \
 	fd \
 	ffmpeg \
 	filezilla \
@@ -54,7 +51,7 @@ yay --noredownload --noconfirm --needed -S \
 	jq \
 	kcm-wacomtablet \
 	kubectl \
-	libnma \
+	#libnma \
 	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
