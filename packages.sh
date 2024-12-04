@@ -58,7 +58,7 @@ yay --noredownload --noconfirm --needed -S \
 	lshw \
 	man-db \
 	man-pages \
-	mdcat \
+	neomutt \
 	neovim \
 	network-manager-applet \
 	networkmanager-openvpn \
