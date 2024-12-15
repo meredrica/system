@@ -24,6 +24,7 @@ reflector --country at,de --fastest 20 --latest 100 --threads 10 --sort rate --p
 useradd --create-home --groups wheel --shell /usr/bin/zsh meredrica
 
 # podman rootless setup
+mkdir /etc/containers
 touch /etc/containers/nodocker
 touch /etc/subuid /etc/subgid
 usermod --add-subuids 100000-165535 --add-subgids 100000-165535 meredrica
@@ -41,9 +42,6 @@ su meredrica <<'EOF'
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo $DIR
 
-# dotfiles setup
-yadm clone --bootstrap https://git.home.meredrica.org/meredrica/dotfiles.git
-
 # install yay
 cd /tmp
 git clone https://aur.archlinux.org/yay.git
@@ -54,6 +52,9 @@ makepkg -sri --noconfirm
 # install a lot of packages via yay
 cd $DIR
 ./packages.sh
+
+# dotfiles setup
+yadm clone --bootstrap https://gitea.home.meredrica.org/meredrica/dotfiles.git
 
 # install sdkman
 curl -s "https://get.sdkman.io" | bash

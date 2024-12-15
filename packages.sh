@@ -51,7 +51,6 @@ yay --noredownload --noconfirm --needed -S \
 	jq \
 	kcm-wacomtablet \
 	kubectl \
-	#libnma \
 	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
