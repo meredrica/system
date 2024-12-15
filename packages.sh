@@ -17,6 +17,7 @@ yay --noredownload --noconfirm --needed -S \
 	bc \
 	betterbird-bin \
 	bind \
+	bluez \
 	bluez-utils \
 	brave-bin \
 	cups \
