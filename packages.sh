@@ -27,6 +27,7 @@ yay --noredownload --noconfirm --needed -S \
 	discord \
 	dolphin \
 	dolphin-plugins \
+	efibootmgr \
 	epson-inkjet-printer-escpr \
 	fd \
 	ffmpeg \
