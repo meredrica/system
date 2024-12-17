@@ -11,6 +11,7 @@ yay --noredownload --noconfirm --needed -S \
 	aspell-de \
 	aspell-en \
 	autojump-rs \
+	autorandr \
 	awesome \
 	bambustudio-bin \
 	base-devel \
