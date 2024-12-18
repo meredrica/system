@@ -34,6 +34,8 @@ passwd meredrica
 
 # enable the wheel group
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+# disable max login attempts
+sed -i 's/# deny = 3/deny = 0/' /etc/security/faillock.conf
 
 # change to user
 su meredrica <<'EOF'
