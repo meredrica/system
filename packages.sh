@@ -65,6 +65,7 @@ yay --noredownload --noconfirm --needed -S \
 	neovim \
 	network-manager-applet \
 	networkmanager-openvpn \
+	nfs-utils \
 	noto-fonts \
 	noto-fonts-emoji\
 	npm \
