@@ -84,6 +84,7 @@ yay --noredownload --noconfirm --needed -S \
 	podman \
 	podman-dnsname \
 	podman-docker \
+	posgresql \
 	python-pynvim \
 	qpdfview \
 	reflector \
