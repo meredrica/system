@@ -5,6 +5,7 @@
 yay --noredownload --noconfirm --needed -S \
 	acpi \
 	acpid \
+	aerc \
 	alacritty \
 	arandr \
 	aspell \
@@ -44,6 +45,7 @@ yay --noredownload --noconfirm --needed -S \
 	glab \
 	glow \
 	gnome-keyring \
+	goimapnotify \
 	gron \
 	grub \
 	helm \
@@ -52,6 +54,7 @@ yay --noredownload --noconfirm --needed -S \
 	imagemagick \
 	inetutils \
 	inkscape \
+	isync \
 	jq \
 	kcm-wacomtablet \
 	kubectl \
