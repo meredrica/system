@@ -7,6 +7,7 @@ yay --noredownload --noconfirm --needed -S \
 	acpid \
 	aerc \
 	alacritty \
+	alacritty-sixel-git \
 	arandr \
 	aspell \
 	aspell-de \
@@ -111,6 +112,7 @@ yay --noredownload --noconfirm --needed -S \
 	unzip \
 	usbutils \
 	vlc \
+	vlc-plugins-all \
 	wacomtablet \
 	wget \
 	wireplumber \
