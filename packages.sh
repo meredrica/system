@@ -26,7 +26,6 @@ yay --noredownload --noconfirm --needed -S \
 	brave-bin \
 	cups \
 	curl \
-	dbeaver \
 	difftastic \
 	discord \
 	dolphin \
@@ -42,8 +41,6 @@ yay --noredownload --noconfirm --needed -S \
 	gimp \
 	git \
 	git-lfs \
-	git-standup-git \
-	glab \
 	glow \
 	gnome-keyring \
 	goimapnotify \
@@ -65,21 +62,16 @@ yay --noredownload --noconfirm --needed -S \
 	lshw \
 	man-db \
 	man-pages \
-	neomutt \
 	neovim \
 	network-manager-applet \
-	networkmanager-openvpn \
 	nfs-utils \
 	noto-fonts \
-	noto-fonts-emoji\
+	noto-fonts-emoji \
 	npm \
 	obsidian \
 	okular \
 	ookla-speedtest-bin \
-	openshift-client-bin \
 	openssh \
-	openvpn \
-	openvpn-update-resolv-conf-git \
 	pacman-mirrorlist \
 	pavucontrol \
 	pciutils \
@@ -88,7 +80,6 @@ yay --noredownload --noconfirm --needed -S \
 	podman \
 	podman-dnsname \
 	podman-docker \
-	posgresql \
 	python-pynvim \
 	qpdfview \
 	reflector \
@@ -103,10 +94,6 @@ yay --noredownload --noconfirm --needed -S \
 	sxiv \
 	tea \
 	tealdeer \
-	texlive-binextra \
-	texlive-latexextra \
-	texlive-latexrecommended\
-	texlive-most \
 	ttf-dejavu \
 	ttf-dejavu-nerd \
 	unzip \
@@ -130,3 +117,7 @@ yay --noredownload --noconfirm --needed -S \
 	zsh-autosuggestions \
 	zsh-completions \
 	zsh-syntax-highlighting \
+	texlive-binextra \
+	texlive-latexextra \
+	texlive-latexrecommended\
+	texlive-most \
