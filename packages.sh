@@ -100,6 +100,7 @@ yay --noredownload --noconfirm --needed -S \
 	usbutils \
 	vlc \
 	vlc-plugins-all \
+	w3m \
 	wacomtablet \
 	wget \
 	wireplumber \
