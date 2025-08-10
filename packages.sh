@@ -12,7 +12,7 @@ yay --noredownload --noconfirm --needed -S \
 	aspell \
 	aspell-de \
 	aspell-en \
-	autojump-rs \
+	autojump-rs-bin \
 	autorandr \
 	awesome \
 	bambustudio-bin \
@@ -24,6 +24,7 @@ yay --noredownload --noconfirm --needed -S \
 	bluez \
 	bluez-utils \
 	brave-bin \
+	calc \
 	cups \
 	curl \
 	difftastic \
@@ -92,6 +93,7 @@ yay --noredownload --noconfirm --needed -S \
 	stern \
 	sudo \
 	sxiv \
+	tailscale \
 	tea \
 	tealdeer \
 	ttf-dejavu \
