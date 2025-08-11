@@ -1,5 +1,8 @@
 #!/bin/zsh
 # this script is to be run as the user with a GUI since yadm asks for a password via GUI
+# enable swap
+sudo swapon /swapfile
+
 # dotfiles setup
 yadm clone --bootstrap https://gitea.home.meredrica.org/meredrica/dotfiles.git
 

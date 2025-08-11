@@ -25,7 +25,6 @@ pacman -S --needed --noconfirm base-devel git zsh sudo openssh wget reflector ya
 # swap setup
 swap_size=free | sed -n '2,2p' | cut -d ':' -f 2 | sed  's/ */ /' | cut -d ' ' -f 2
 mkswap -U clear --file /swapfile --size $swap_size
-swapon /swapfile
 echo '/swapfile           	none      	swap      	defaults  	0 0' >> /etc/fstab
 
 # time setup
