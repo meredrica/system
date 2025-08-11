@@ -63,6 +63,7 @@ yay --noredownload --noconfirm --needed -S \
 	lshw \
 	man-db \
 	man-pages \
+	neofetch \
 	neovim \
 	network-manager-applet \
 	nfs-utils \
