@@ -94,6 +94,12 @@ sdk install maven
 # update tldr
 tldr --update
 
+# setup goimapnotify
+for file in ~/.config/mail ; do systemctl enable goimapnotify@$file --user; done
+
+# sync all email
+mbsync -a
+
 EOF
 
 # enable a few things we need
