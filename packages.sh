@@ -33,6 +33,7 @@ yay --noredownload --noconfirm --needed -S \
 	dolphin-plugins \
 	efibootmgr \
 	epson-inkjet-printer-escpr \
+	fastfetch \
 	fd \
 	ffmpeg \
 	filezilla \
@@ -63,7 +64,6 @@ yay --noredownload --noconfirm --needed -S \
 	lshw \
 	man-db \
 	man-pages \
-	neofetch \
 	neovim \
 	network-manager-applet \
 	nfs-utils \

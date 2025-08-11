@@ -19,4 +19,3 @@ for file in ~/.config/mail ; do systemctl enable goimapnotify@$file --user; done
 
 # sync all email
 mbsync -a
-
