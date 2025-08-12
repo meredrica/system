@@ -7,7 +7,6 @@ yay --noredownload --noconfirm --needed -S \
 	acpid \
 	aerc \
 	alacritty \
-	alacritty-sixel-git \
 	arandr \
 	aspell \
 	aspell-de \
