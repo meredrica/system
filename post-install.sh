@@ -15,7 +15,8 @@ sdk install java
 sdk install gradle
 sdk install maven
 # setup goimapnotify
-for file in ~/.config/mail ; do systemctl enable goimapnotify@$file --user; done
+cd ~/.config/mail
+for file in *@* ; do systemctl enable goimapnotify@$file --user; done
 
 # sync all email
 mbsync -a
