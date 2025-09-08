@@ -83,6 +83,9 @@ cd $DIR
 # update tldr
 tldr --update
 
+# enable podman
+systemctl --user enable podman.socket
+
 EOF
 
 # enable a few things we need
