@@ -5,3 +5,4 @@ yay --noredownload --noconfirm --needed -S \
 	glab \
 	networkmanager-openvpn \
 	openvpn \
+sdk install maven

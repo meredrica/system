@@ -13,10 +13,9 @@ source /home/meredrica/.sdkman/bin/sdkman-init.sh
 # install java stuff
 sdk install java
 sdk install gradle
-sdk install maven
 # setup goimapnotify
 cd ~/.config/mail
-for file in *@* ; do systemctl enable goimapnotify@$file --user; done
+for file in *@* ; do systemctl enable goimapnotify@$file --user ; mkdir -p /home/meredrica/mail/$file ; done
 
 # sync all email
 mbsync -a
