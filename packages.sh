@@ -74,6 +74,7 @@ yay --noredownload --noconfirm --needed -S \
 	ookla-speedtest-bin \
 	openssh \
 	pacman-mirrorlist \
+	pandoc-cli \
 	pavucontrol \
 	pciutils \
 	pipewire-alsa \
@@ -98,6 +99,7 @@ yay --noredownload --noconfirm --needed -S \
 	tealdeer \
 	ttf-dejavu \
 	ttf-dejavu-nerd \
+	typst \
 	unzip \
 	usbutils \
 	vlc \
