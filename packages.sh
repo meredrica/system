@@ -35,6 +35,7 @@ yay --noredownload --noconfirm --needed -S \
 	fastfetch \
 	fd \
 	ffmpeg \
+	ffmpegthumbnailer \
 	filezilla \
 	flameshot \
 	frei0r-plugins \
