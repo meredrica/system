@@ -62,6 +62,7 @@ yay --noredownload --noconfirm --needed -S \
 	lightdm \
 	lightdm-gtk-greeter \
 	lshw \
+	lsof \
 	man-db \
 	man-pages \
 	neovim \
