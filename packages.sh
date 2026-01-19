@@ -26,6 +26,7 @@ yay --noredownload --noconfirm --needed -S \
 	calc \
 	cups \
 	curl \
+	dex \
 	difftastic \
 	discord \
 	dolphin \
