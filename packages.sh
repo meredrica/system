@@ -13,6 +13,7 @@ yay --noredownload --noconfirm --needed -S \
 	aspell-en \
 	autojump-rs-bin \
 	autorandr \
+	avahi \
 	awesome \
 	bambustudio-bin \
 	base-devel \
@@ -32,7 +33,7 @@ yay --noredownload --noconfirm --needed -S \
 	dolphin \
 	dolphin-plugins \
 	efibootmgr \
-	epson-inkjet-printer-escpr \
+	epson-inkjet-printer-escpr2 \
 	fastfetch \
 	fd \
 	ffmpeg \
@@ -72,6 +73,7 @@ yay --noredownload --noconfirm --needed -S \
 	noto-fonts \
 	noto-fonts-emoji \
 	npm \
+	nss-mdns \
 	obsidian \
 	okular \
 	ookla-speedtest-bin \

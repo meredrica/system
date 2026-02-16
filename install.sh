@@ -95,6 +95,7 @@ systemctl enable bluetooth
 systemctl enable cups
 systemctl enable blueman-mechanism.service
 systemctl enable tailscaled
+systemctl enable avahi-daemon
 
 # GRUB setup
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
