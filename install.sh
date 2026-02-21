@@ -111,3 +111,6 @@ sed -i "s/_cryptdevice/$cryptdevice/" /etc/default/grub
 sed -i "s/_resume/$resume/" /etc/default/grub
 sed -i "s/_resume_offset/$resume_offset/" /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# add avahi to nss
+sed -i 's/resolve/mdns_minimal [NOTFOUND=return] resolve/' /etc/nsswitch.conf
