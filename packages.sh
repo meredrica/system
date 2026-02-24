@@ -102,6 +102,7 @@ yay --noredownload --noconfirm --needed -S \
 	tailscale \
 	tea \
 	tealdeer \
+	tree-sitter-cli \
 	ttf-dejavu \
 	ttf-dejavu-nerd \
 	typst \
