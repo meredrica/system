@@ -3,6 +3,7 @@
 # we keep them around anyway so we have a nice list in one place
 #
 yay --noredownload --noconfirm --needed -S \
+	accountsservice \
 	acpi \
 	acpid \
 	aerc \
@@ -23,6 +24,7 @@ yay --noredownload --noconfirm --needed -S \
 	bluez \
 	bluez-utils \
 	brave-bin \
+	brightnessctl \
 	calc \
 	cups \
 	curl \
@@ -62,6 +64,7 @@ yay --noredownload --noconfirm --needed -S \
 	libreoffice-fresh \
 	lightdm \
 	lightdm-gtk-greeter \
+	linux-headers \
 	lshw \
 	lsof \
 	man-db \
