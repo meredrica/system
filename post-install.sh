@@ -15,8 +15,8 @@ sdk install java
 sdk install gradle
 
 # setup goimapnotify
-cd ~/.config/mail
-for file in *@* ; do systemctl enable goimapnotify@$file --user ; mkdir -p /home/meredrica/mail/$file ; done
+# cd ~/.config/mail
+# for file in *@* ; do systemctl enable goimapnotify@$file --user ; mkdir -p /home/meredrica/mail/$file ; done
 
 # sync all email
 mbsync -a

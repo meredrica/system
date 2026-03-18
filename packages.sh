@@ -17,7 +17,6 @@ yay --noredownload --noconfirm --needed -S \
 	awesome \
 	bambustudio-bin \
 	base-devel \
-	bc \
 	betterbird-bin \
 	bind \
 	blueman \
@@ -122,7 +121,6 @@ yay --noredownload --noconfirm --needed -S \
 	yadm \
 	yq \
 	zip \
-	zk \
 	zoom \
 	zsh \
 	zsh-autosuggestions \
