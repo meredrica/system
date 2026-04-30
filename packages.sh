@@ -113,7 +113,7 @@ yay --noredownload --noconfirm --needed -S \
 	wacomtablet \
 	wget \
 	wireplumber \
-	x11-emoji-picker \
+	x11-emoji-picker-git \
 	xclip \
 	xorg-server \
 	xournalpp \
