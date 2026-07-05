@@ -79,6 +79,7 @@ yay --noredownload --noconfirm --needed -S \
 	obsidian \
 	okular \
 	ookla-speedtest-bin \
+	openai-codex \
 	openssh \
 	pacman-mirrorlist \
 	pandoc-cli \
